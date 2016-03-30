@@ -68,6 +68,7 @@ CREATE TABLE `ent_propdetail` (
   `description` text NOT NULL,
   `fk_owner` int(10) NOT NULL,
   `value` varchar(20) NOT NULL,
+  `dateposted` datetime NOT NULL,
   `status` enum('Available','Leased','Sold') NOT NULL DEFAULT 'Available',
   `photos` text NOT NULL,
   PRIMARY KEY (`id`),
@@ -75,21 +76,6 @@ CREATE TABLE `ent_propdetail` (
   KEY `fk_proptype` (`fk_proptype`),
   CONSTRAINT `fk_propowner` FOREIGN KEY (`fk_owner`) REFERENCES `ent_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_proptype` FOREIGN KEY (`fk_proptype`) REFERENCES `ent_proptype` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-/*Table structure for table `ent_proprecommendation` */
-
-DROP TABLE IF EXISTS `ent_proprecommendation`;
-
-CREATE TABLE `ent_proprecommendation` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `fk_proprequirement` int(10) NOT NULL,
-  `fk_propdetail` int(10) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_recommendedprop` (`fk_propdetail`),
-  KEY `fk_requiredprop` (`fk_proprequirement`),
-  CONSTRAINT `fk_recommendedprop` FOREIGN KEY (`fk_propdetail`) REFERENCES `ent_propdetail` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `fk_requiredprop` FOREIGN KEY (`fk_proprequirement`) REFERENCES `ent_proprequirement` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Table structure for table `ent_proprequirement` */
@@ -104,6 +90,7 @@ CREATE TABLE `ent_proprequirement` (
   `description` text NOT NULL,
   `fk_client` int(10) NOT NULL,
   `budget` varchar(20) NOT NULL,
+  `dateposted` datetime NOT NULL,
   `status` enum('Pending','Closed') NOT NULL DEFAULT 'Pending',
   PRIMARY KEY (`id`),
   KEY `fk_client` (`fk_client`),
@@ -129,16 +116,17 @@ DROP TABLE IF EXISTS `ent_user`;
 
 CREATE TABLE `ent_user` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
-  `usrtype` enum('Admin','Property Owner','Client') NOT NULL,
+  `usrtype` enum('Admin','PropertyOwner','Client') NOT NULL,
   `fullname` varchar(50) NOT NULL,
   `username` varchar(20) NOT NULL,
   `address` varchar(40) NOT NULL,
   `phone` varchar(10) NOT NULL,
   `email` varchar(40) NOT NULL,
   `password` varchar(100) NOT NULL,
+  `regdate` datetime NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `usrname` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Table structure for table `ent_visitschedule` */
 
@@ -149,8 +137,6 @@ CREATE TABLE `ent_visitschedule` (
   `fk_propdetail` int(10) NOT NULL,
   `fk_client` int(10) NOT NULL,
   `datetime` datetime NOT NULL,
-  `date` date NOT NULL,
-  `time` time NOT NULL,
   `paymentcode` varchar(20) NOT NULL,
   `status` enum('Pending','Verified','Nullified') NOT NULL DEFAULT 'Pending',
   PRIMARY KEY (`id`),

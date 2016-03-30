@@ -29,6 +29,7 @@ $this->menu=array(
 		'description',
 		'fk_owner',
 		'value',
+		'dateposted',
 		'status',
 		'photos',
 	),

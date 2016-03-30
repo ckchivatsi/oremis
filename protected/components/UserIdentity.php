@@ -35,7 +35,7 @@ class UserIdentity extends CUserIdentity
 		}       
 		else 
 		{
-			$this->_id = $user->id;
+			$this->_id = $user->usrtype;
 			$this->setState('role', $user->usrtype);//this returns usrtype when Yii::app()->user->role is executed
 			$this->errorCode = self::ERROR_NONE;
 		}

@@ -62,6 +62,12 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'dateposted'); ?>
+		<?php echo $form->textField($model,'dateposted'); ?>
+		<?php echo $form->error($model,'dateposted'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'status'); ?>
 		<?php echo $form->textField($model,'status',array('size'=>9,'maxlength'=>9)); ?>
 		<?php echo $form->error($model,'status'); ?>

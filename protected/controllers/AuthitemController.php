@@ -70,8 +70,9 @@ class AuthitemController extends Controller
 		if(isset($_POST['Authitem']))
 		{
 			$model->attributes=$_POST['Authitem'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->name));
+			if($model->save()){
+			//	$this->redirect(array('view','id'=>$model->name));
+			}
 		}
 
 		$this->render('create',array(

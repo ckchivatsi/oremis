@@ -49,18 +49,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'date'); ?>
-		<?php echo $form->textField($model,'date'); ?>
-		<?php echo $form->error($model,'date'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'time'); ?>
-		<?php echo $form->textField($model,'time'); ?>
-		<?php echo $form->error($model,'time'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'paymentcode'); ?>
 		<?php echo $form->textField($model,'paymentcode',array('size'=>20,'maxlength'=>20)); ?>
 		<?php echo $form->error($model,'paymentcode'); ?>

@@ -1760,3 +1760,777 @@ Stack trace:
 #10 {main}
 REQUEST_URI=/oremis/index.php?r=myInit/run
 ---
+2016/03/29 17:12:14 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/oremis/index.php?r=user/admin
+HTTP_REFERER=http://localhost/oremis/index.php?r=site/login
+---
+2016/03/29 17:13:43 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/oremis/index.php?r=user/admin
+HTTP_REFERER=http://localhost/oremis/index.php?r=site/login
+---
+2016/03/29 17:13:49 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/oremis/index.php?r=user/admin
+---
+2016/03/29 20:49:05 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\oremis\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#10 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/oremis/index.php?r=user/view
+---
+2016/03/30 13:04:22 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'PropertyOwner' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `authitem` (`name`, `type`, `description`, `bizrule`, `data`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in C:\xampp\htdocs\oremis\protected\controllers\AuthitemController.php (73)
+in C:\xampp\htdocs\oremis\index.php (13)
+2016/03/30 13:04:22 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'PropertyOwner' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `authitem` (`name`, `type`, `description`, `bizrule`, `data`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in C:\xampp\htdocs\oremis\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\oremis\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\oremis\protected\controllers\AuthitemController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\oremis\yii\framework\web\actions\CInlineAction.php(49): AuthitemController->actionCreate()
+#4 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('authitem/create')
+#14 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/oremis/index.php?r=authitem/create
+HTTP_REFERER=http://localhost/oremis/index.php?r=authitem/create
+---
+2016/03/30 13:04:33 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'PropertyOwner' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `authitem` (`name`, `type`, `description`, `bizrule`, `data`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in C:\xampp\htdocs\oremis\protected\controllers\AuthitemController.php (73)
+in C:\xampp\htdocs\oremis\index.php (13)
+2016/03/30 13:04:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'PropertyOwner' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `authitem` (`name`, `type`, `description`, `bizrule`, `data`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in C:\xampp\htdocs\oremis\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\oremis\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\oremis\protected\controllers\AuthitemController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\oremis\yii\framework\web\actions\CInlineAction.php(49): AuthitemController->actionCreate()
+#4 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('authitem/create')
+#14 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/oremis/index.php?r=authitem/create
+HTTP_REFERER=http://localhost/oremis/index.php?r=authitem/create
+---
+2016/03/30 13:53:00 [error] [php] Undefined variable: auth (C:\xampp\htdocs\oremis\protected\controllers\myInitController.php:10)
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(286): myInitController->runAction()
+#1 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): myInitController->runActionWithFilters()
+#2 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): myInitController->run()
+#3 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\oremis\index.php(13): CWebApplication->run()
+REQUEST_URI=/oremis/index.php?r=myInit/run
+in C:\xampp\htdocs\oremis\protected\controllers\myInitController.php (10)
+in C:\xampp\htdocs\oremis\index.php (13)
+2016/03/30 14:20:54 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`oremis`.`authitemchild`, CONSTRAINT `authitemchild_ibfk_2` FOREIGN KEY (`child`) REFERENCES `authitem` (`name`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `authitemchild` (`parent`, `child`) VALUES (:yp0, :yp1).
+in C:\xampp\htdocs\oremis\protected\controllers\AuthitemchildController.php (73)
+in C:\xampp\htdocs\oremis\index.php (13)
+2016/03/30 14:20:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`oremis`.`authitemchild`, CONSTRAINT `authitemchild_ibfk_2` FOREIGN KEY (`child`) REFERENCES `authitem` (`name`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `authitemchild` (`parent`, `child`) VALUES (:yp0, :yp1)' in C:\xampp\htdocs\oremis\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\oremis\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\oremis\protected\controllers\AuthitemchildController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\oremis\yii\framework\web\actions\CInlineAction.php(49): AuthitemchildController->actionCreate()
+#4 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('authitemchild/c...')
+#14 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/oremis/index.php?r=authitemchild/create
+HTTP_REFERER=http://localhost/oremis/index.php?r=authitemchild/create
+---
+2016/03/30 14:21:47 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\oremis\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('authitemchild/v...')
+#10 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/oremis/index.php?r=authitemchild/view&id%5Bparent%5D=Admin&id%5Bchild%5D=Client
+HTTP_REFERER=http://localhost/oremis/index.php?r=authitemchild/admin
+---
+2016/03/30 14:22:09 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\oremis\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('authitemchild/v...')
+#10 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/oremis/index.php?r=authitemchild/view&id%5Bparent%5D=Admin&id%5Bchild%5D=Client
+HTTP_REFERER=http://localhost/oremis/index.php?r=authitemchild/admin
+---
+2016/03/30 14:22:14 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\oremis\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#9 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('authitemchild/u...')
+#10 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/oremis/index.php?r=authitemchild/update&id%5Bparent%5D=Admin&id%5Bchild%5D=Client
+HTTP_REFERER=http://localhost/oremis/index.php?r=authitemchild/admin
+---
+2016/03/30 14:22:23 [error] [exception.CDbException] exception 'CDbException' with message 'The value for the column "parent" is not supplied when querying the table "authitemchild".' in C:\xampp\htdocs\oremis\yii\framework\db\schema\CDbCommandBuilder.php:816
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\db\schema\CDbCommandBuilder.php(624): CDbCommandBuilder->createInCondition(Object(CMysqlTableSchema), Array, Array, '`t`.')
+#1 C:\xampp\htdocs\oremis\yii\framework\db\ar\CActiveRecord.php(1490): CDbCommandBuilder->createPkCriteria(Object(CMysqlTableSchema), 'Admin', '', Array, '`t`.')
+#2 C:\xampp\htdocs\oremis\protected\controllers\AuthitemchildController.php(156): CActiveRecord->findByPk('Admin')
+#3 C:\xampp\htdocs\oremis\protected\controllers\AuthitemchildController.php(55): AuthitemchildController->loadModel('Admin')
+#4 [internal function]: AuthitemchildController->actionView('Admin')
+#5 C:\xampp\htdocs\oremis\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(AuthitemchildController), Array)
+#6 C:\xampp\htdocs\oremis\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AuthitemchildController), Object(ReflectionMethod), Array)
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#16 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('authitemchild/v...')
+#17 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/oremis/index.php?r=authitemchild/view&id=Admin
+HTTP_REFERER=http://localhost/oremis/index.php?r=authitemchild/index
+---
+2016/03/30 14:22:55 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`oremis`.`authitemchild`, CONSTRAINT `authitemchild_ibfk_2` FOREIGN KEY (`child`) REFERENCES `authitem` (`name`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `authitemchild` (`parent`, `child`) VALUES (:yp0, :yp1).
+in C:\xampp\htdocs\oremis\protected\controllers\AuthitemchildController.php (73)
+in C:\xampp\htdocs\oremis\index.php (13)
+2016/03/30 14:22:55 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`oremis`.`authitemchild`, CONSTRAINT `authitemchild_ibfk_2` FOREIGN KEY (`child`) REFERENCES `authitem` (`name`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `authitemchild` (`parent`, `child`) VALUES (:yp0, :yp1)' in C:\xampp\htdocs\oremis\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\oremis\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\oremis\protected\controllers\AuthitemchildController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\oremis\yii\framework\web\actions\CInlineAction.php(49): AuthitemchildController->actionCreate()
+#4 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('authitemchild/c...')
+#14 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/oremis/index.php?r=authitemchild/create
+HTTP_REFERER=http://localhost/oremis/index.php?r=authitemchild/create
+---
+2016/03/30 14:23:33 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Admin-ManageUsers' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `authitemchild` (`parent`, `child`) VALUES (:yp0, :yp1).
+in C:\xampp\htdocs\oremis\protected\controllers\AuthitemchildController.php (73)
+in C:\xampp\htdocs\oremis\index.php (13)
+2016/03/30 14:23:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Admin-ManageUsers' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `authitemchild` (`parent`, `child`) VALUES (:yp0, :yp1)' in C:\xampp\htdocs\oremis\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\oremis\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\oremis\protected\controllers\AuthitemchildController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\oremis\yii\framework\web\actions\CInlineAction.php(49): AuthitemchildController->actionCreate()
+#4 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('authitemchild/c...')
+#14 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/oremis/index.php?r=authitemchild/create
+HTTP_REFERER=http://localhost/oremis/index.php?r=authitemchild/create
+---
+2016/03/30 14:23:35 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Admin-ManageUsers' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `authitemchild` (`parent`, `child`) VALUES (:yp0, :yp1).
+in C:\xampp\htdocs\oremis\protected\controllers\AuthitemchildController.php (73)
+in C:\xampp\htdocs\oremis\index.php (13)
+2016/03/30 14:23:35 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Admin-ManageUsers' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `authitemchild` (`parent`, `child`) VALUES (:yp0, :yp1)' in C:\xampp\htdocs\oremis\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\oremis\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\oremis\protected\controllers\AuthitemchildController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\oremis\yii\framework\web\actions\CInlineAction.php(49): AuthitemchildController->actionCreate()
+#4 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('authitemchild/c...')
+#14 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/oremis/index.php?r=authitemchild/create
+---
+2016/03/30 14:23:57 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`oremis`.`authitemchild`, CONSTRAINT `authitemchild_ibfk_2` FOREIGN KEY (`child`) REFERENCES `authitem` (`name`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `authitemchild` (`parent`, `child`) VALUES (:yp0, :yp1).
+in C:\xampp\htdocs\oremis\protected\controllers\AuthitemchildController.php (73)
+in C:\xampp\htdocs\oremis\index.php (13)
+2016/03/30 14:23:57 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`oremis`.`authitemchild`, CONSTRAINT `authitemchild_ibfk_2` FOREIGN KEY (`child`) REFERENCES `authitem` (`name`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `authitemchild` (`parent`, `child`) VALUES (:yp0, :yp1)' in C:\xampp\htdocs\oremis\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\oremis\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\oremis\protected\controllers\AuthitemchildController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\oremis\yii\framework\web\actions\CInlineAction.php(49): AuthitemchildController->actionCreate()
+#4 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('authitemchild/c...')
+#14 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/oremis/index.php?r=authitemchild/create
+HTTP_REFERER=http://localhost/oremis/index.php?r=authitemchild/create
+---
+2016/03/30 14:31:47 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.usrtype" is not defined.' in C:\xampp\htdocs\oremis\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('usrtype')
+#1 C:\xampp\htdocs\oremis\protected\controllers\myInitController.php(8): CWebUser->__get('usrtype')
+#2 C:\xampp\htdocs\oremis\yii\framework\web\actions\CInlineAction.php(49): myInitController->actionRun()
+#3 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('run')
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('myInit/run')
+#8 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/oremis/index.php?r=myInit/run
+---
+2016/03/30 17:57:56 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'ManageProperty-SearchRequirement' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `authitemchild` (`parent`, `child`) VALUES (:yp0, :yp1).
+in C:\xampp\htdocs\oremis\protected\controllers\AuthitemchildController.php (73)
+in C:\xampp\htdocs\oremis\index.php (13)
+2016/03/30 17:57:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'ManageProperty-SearchRequirement' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `authitemchild` (`parent`, `child`) VALUES (:yp0, :yp1)' in C:\xampp\htdocs\oremis\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\oremis\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\oremis\protected\controllers\AuthitemchildController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\oremis\yii\framework\web\actions\CInlineAction.php(49): AuthitemchildController->actionCreate()
+#4 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('authitemchild/c...')
+#14 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/oremis/index.php?r=authitemchild/create
+HTTP_REFERER=http://localhost/oremis/index.php?r=authitemchild/create
+---
+2016/03/30 17:59:26 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\oremis\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1116): CFilterChain->run()
+#3 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#4 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#12 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('authitemchild/d...')
+#13 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/oremis/index.php?ajax=authitemchild-grid&id%5Bparent%5D=ManageProperty&id%5Bchild%5D=SearchRequirement&r=authitemchild%2Fdelete
+HTTP_REFERER=http://localhost/oremis/index.php?r=authitemchild/admin
+---
+2016/03/30 18:01:58 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\oremis\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#9 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('authitemchild/u...')
+#10 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/oremis/index.php?r=authitemchild/update&id%5Bparent%5D=ManageProperty&id%5Bchild%5D=SearchRequirement
+HTTP_REFERER=http://localhost/oremis/index.php?r=authitemchild/admin
+---
+2016/03/30 18:32:24 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`oremis`.`authitemchild`, CONSTRAINT `authitemchild_ibfk_2` FOREIGN KEY (`child`) REFERENCES `authitem` (`name`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `authitemchild` (`parent`, `child`) VALUES (:yp0, :yp1).
+in C:\xampp\htdocs\oremis\protected\controllers\AuthitemchildController.php (73)
+in C:\xampp\htdocs\oremis\index.php (13)
+2016/03/30 18:32:24 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`oremis`.`authitemchild`, CONSTRAINT `authitemchild_ibfk_2` FOREIGN KEY (`child`) REFERENCES `authitem` (`name`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `authitemchild` (`parent`, `child`) VALUES (:yp0, :yp1)' in C:\xampp\htdocs\oremis\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\oremis\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\oremis\protected\controllers\AuthitemchildController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\oremis\yii\framework\web\actions\CInlineAction.php(49): AuthitemchildController->actionCreate()
+#4 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('authitemchild/c...')
+#14 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/oremis/index.php?r=authitemchild/create
+HTTP_REFERER=http://localhost/oremis/index.php?r=authitemchild/create
+---
+2016/03/30 20:49:51 [error] [php] include(Authassignmment.php): failed to open stream: No such file or directory (C:\xampp\htdocs\oremis\yii\framework\YiiBase.php:432)
+Stack trace:
+#0 C:\xampp\htdocs\oremis\protected\controllers\UserController.php(118): spl_autoload_call()
+#1 C:\xampp\htdocs\oremis\yii\framework\web\actions\CInlineAction.php(49): UserController->actionRegister()
+#2 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#4 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#7 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#10 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): UserController->run()
+#11 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\oremis\index.php(13): CWebApplication->run()
+REQUEST_URI=/oremis/index.php?r=user/register
+in C:\xampp\htdocs\oremis\protected\controllers\UserController.php (118)
+in C:\xampp\htdocs\oremis\index.php (13)
+2016/03/30 20:50:31 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'admin09' for key 'usrname'. The SQL statement executed was: INSERT INTO `ent_user` (`usrtype`, `fullname`, `username`, `address`, `phone`, `email`, `password`, `regdate`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in C:\xampp\htdocs\oremis\protected\controllers\UserController.php (115)
+in C:\xampp\htdocs\oremis\index.php (13)
+2016/03/30 20:50:31 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'admin09' for key 'usrname'. The SQL statement executed was: INSERT INTO `ent_user` (`usrtype`, `fullname`, `username`, `address`, `phone`, `email`, `password`, `regdate`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in C:\xampp\htdocs\oremis\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\oremis\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\oremis\protected\controllers\UserController.php(115): CActiveRecord->save()
+#3 C:\xampp\htdocs\oremis\yii\framework\web\actions\CInlineAction.php(49): UserController->actionRegister()
+#4 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('register')
+#13 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/register')
+#14 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/oremis/index.php?r=user/register
+---
+2016/03/30 21:14:31 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`oremis`.`authassignment`, CONSTRAINT `authassignment_ibfk_1` FOREIGN KEY (`itemname`) REFERENCES `authitem` (`name`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `authassignment` (`itemname`, `userid`) VALUES (:yp0, :yp1).
+in C:\xampp\htdocs\oremis\protected\controllers\UserController.php (123)
+in C:\xampp\htdocs\oremis\index.php (13)
+2016/03/30 21:14:31 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`oremis`.`authassignment`, CONSTRAINT `authassignment_ibfk_1` FOREIGN KEY (`itemname`) REFERENCES `authitem` (`name`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `authassignment` (`itemname`, `userid`) VALUES (:yp0, :yp1)' in C:\xampp\htdocs\oremis\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\oremis\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\oremis\protected\controllers\UserController.php(123): CActiveRecord->save()
+#3 C:\xampp\htdocs\oremis\yii\framework\web\actions\CInlineAction.php(49): UserController->actionRegister()
+#4 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('register')
+#13 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/register')
+#14 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/oremis/index.php?r=user/register
+HTTP_REFERER=http://localhost/oremis/index.php?r=user/register
+---
+2016/03/30 21:25:34 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/oremis/index.php?r=user/admin
+HTTP_REFERER=http://localhost/oremis/index.php?r=user/create
+---
+2016/03/30 21:26:07 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/oremis/index.php?r=user/admin
+---
+2016/03/30 21:26:10 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/oremis/index.php?r=user/admin
+---
+2016/03/30 21:26:15 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/oremis/index.php?r=user/admin
+---
+2016/03/30 21:26:32 [error] [exception.CException] exception 'CException' with message 'Property "CAccessRule.role" is not defined.' in C:\xampp\htdocs\oremis\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php(115): CComponent->__set('role', Array)
+#1 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1144): CAccessControlFilter->setRules(Array)
+#2 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#3 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#5 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#8 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/oremis/index.php?r=user/admin
+---
+2016/03/30 21:26:41 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/oremis/index.php?r=user/admin
+---
+2016/03/30 21:27:44 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.roles" is not defined.' in C:\xampp\htdocs\oremis\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('roles')
+#1 C:\xampp\htdocs\oremis\protected\controllers\myInitController.php(8): CWebUser->__get('roles')
+#2 C:\xampp\htdocs\oremis\yii\framework\web\actions\CInlineAction.php(49): myInitController->actionRun()
+#3 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('run')
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('myInit/run')
+#8 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/oremis/index.php?r=myInit/run
+---
+2016/03/30 21:28:26 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/oremis/index.php?r=user/admin
+---
+2016/03/30 21:28:27 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/oremis/index.php?r=user/admin
+---
+2016/03/30 21:28:27 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/oremis/index.php?r=user/admin
+---
+2016/03/30 21:28:27 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/oremis/index.php?r=user/admin
+---
+2016/03/30 21:28:28 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/oremis/index.php?r=user/admin
+---
+2016/03/30 21:28:28 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/oremis/index.php?r=user/admin
+---
+2016/03/30 21:28:30 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/oremis/index.php?r=user/admin
+---
+2016/03/30 21:28:47 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/oremis/index.php?r=user/admin
+---
+2016/03/30 21:28:47 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/oremis/index.php?r=user/admin
+---
+2016/03/30 21:28:48 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/oremis/index.php?r=user/admin
+---

@@ -21,23 +21,13 @@
 	<?php echo CHtml::encode($data->datetime); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('date')); ?>:</b>
-	<?php echo CHtml::encode($data->date); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('time')); ?>:</b>
-	<?php echo CHtml::encode($data->time); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('paymentcode')); ?>:</b>
 	<?php echo CHtml::encode($data->paymentcode); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('status')); ?>:</b>
 	<?php echo CHtml::encode($data->status); ?>
 	<br />
 
-	*/ ?>
 
 </div>

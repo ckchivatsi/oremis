@@ -12,13 +12,13 @@
  * @property string $description
  * @property integer $fk_owner
  * @property string $value
+ * @property string $dateposted
  * @property string $status
  * @property string $photos
  *
  * The followings are the available model relations:
  * @property User $fkOwner
  * @property Proptype $fkProptype
- * @property Proprecommendation[] $proprecommendations
  * @property Visitschedule[] $visitschedules
  */
 class Propdetail extends CActiveRecord
@@ -39,7 +39,7 @@ class Propdetail extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('category, fk_proptype, name, location, description, fk_owner, value, photos', 'required'),
+			array('category, fk_proptype, name, location, description, fk_owner, value, dateposted, photos', 'required'),
 			array('fk_proptype, fk_owner', 'numerical', 'integerOnly'=>true),
 			array('category', 'length', 'max'=>4),
 			array('name', 'length', 'max'=>50),
@@ -48,7 +48,7 @@ class Propdetail extends CActiveRecord
 			array('status', 'length', 'max'=>9),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, category, fk_proptype, name, location, description, fk_owner, value, status, photos', 'safe', 'on'=>'search'),
+			array('id, category, fk_proptype, name, location, description, fk_owner, value, dateposted, status, photos', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -62,7 +62,6 @@ class Propdetail extends CActiveRecord
 		return array(
 			'fkOwner' => array(self::BELONGS_TO, 'User', 'fk_owner'),
 			'fkProptype' => array(self::BELONGS_TO, 'Proptype', 'fk_proptype'),
-			'proprecommendations' => array(self::HAS_MANY, 'Proprecommendation', 'fk_propdetail'),
 			'visitschedules' => array(self::HAS_MANY, 'Visitschedule', 'fk_propdetail'),
 		);
 	}
@@ -81,6 +80,7 @@ class Propdetail extends CActiveRecord
 			'description' => 'Description',
 			'fk_owner' => 'Fk Owner',
 			'value' => 'Value',
+			'dateposted' => 'Dateposted',
 			'status' => 'Status',
 			'photos' => 'Photos',
 		);
@@ -112,6 +112,7 @@ class Propdetail extends CActiveRecord
 		$criteria->compare('description',$this->description,true);
 		$criteria->compare('fk_owner',$this->fk_owner);
 		$criteria->compare('value',$this->value,true);
+		$criteria->compare('dateposted',$this->dateposted,true);
 		$criteria->compare('status',$this->status,true);
 		$criteria->compare('photos',$this->photos,true);
 

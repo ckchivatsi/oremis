@@ -31,8 +31,6 @@ CREATE TABLE `authassignment` (
 
 /*Data for the table `authassignment` */
 
-insert  into `authassignment`(`itemname`,`userid`,`bizrule`,`data`) values ('admin','adminD',NULL,'N;'),('author','authorB',NULL,'N;'),('editor','editorC',NULL,'N;'),('reader','readerA',NULL,'N;');
-
 /*Table structure for table `authitem` */
 
 DROP TABLE IF EXISTS `authitem`;
@@ -48,7 +46,7 @@ CREATE TABLE `authitem` (
 
 /*Data for the table `authitem` */
 
-insert  into `authitem`(`name`,`type`,`description`,`bizrule`,`data`) values ('admin',2,'',NULL,'N;'),('author',2,'',NULL,'N;'),('createPost',0,'create a post',NULL,'N;'),('deletePost',0,'delete a post',NULL,'N;'),('editor',2,'',NULL,'N;'),('reader',2,'',NULL,'N;'),('readPost',0,'read a post',NULL,'N;'),('updateOwnPost',1,'update a post by author himself','return Yii::app()->user->id==$params[\"post\"]->authID;','N;'),('updatePost',0,'update a post',NULL,'N;');
+insert  into `authitem`(`name`,`type`,`description`,`bizrule`,`data`) values ('Admin',2,'','','N;'),('Client',2,'','','N;'),('CreateProperty',0,'','','N;'),('CreatePropertyType',0,'','','N;'),('CreateRequirement',0,'','','N;'),('CreateSchedule',0,'','','N;'),('CreateUser',0,'','','N;'),('DeleteProperty',0,'','','N;'),('DeletePropertyType',0,'','','N;'),('DeleteRecords',1,'','','N;'),('DeleteRequirement',0,'','','N;'),('DeleteSchedule',0,'','','N;'),('DeleteUser',0,'','','N;'),('FindProperty',1,'','','N;'),('FindRequirements',1,'','','N;'),('ListOwnProperty',0,'','return','N;'),('ListOwnRequirement',0,'','return','N;'),('ListOwnSchedule',0,'','return','N;'),('ListProperty',0,'','','N;'),('ListPropertyTypes',0,'','','N;'),('ListRequirements',0,'','','N;'),('ListSchedules',0,'','','N;'),('ListUsers',0,'','','N;'),('ManageProperty',1,'','','N;'),('ManagePropertyTypes',1,'','','N;'),('ManageRequirements',1,'','','N;'),('ManageSchedules',1,'','','N;'),('ManageUsers',1,'','','N;'),('MyProfile',1,'','','N;'),('MyProperty',1,'','','N;'),('MyRequirements',1,'','','N;'),('MySchedule',1,'','','N;'),('PropertyOwner',2,'','','N;'),('SearchOwnProperty',0,'','return','N;'),('SearchOwnRequirement',0,'','return','N;'),('SearchOwnSchedule',0,'','return','N;'),('SearchProperty',0,'','','N;'),('SearchPropertyType',0,'','','N;'),('SearchRequirement',0,'','','N;'),('SearchSchedule',0,'','','N;'),('SearchUser',0,'','','N;'),('UpdateOwnProfile',0,'','return','N;'),('UpdateOwnProperty',0,'','return','N;'),('UpdateOwnRequirement',0,'','return','N;'),('UpdateOwnSchedule',0,'','return','N;'),('UpdateProperty',0,'','','N;'),('UpdatePropertyType',0,'','','N;'),('UpdateRequirement',0,'','','N;'),('UpdateSchedule',0,'','','N;'),('UpdateUser',0,'','','N;'),('ViewOwnProfile',0,'','return','N;'),('ViewOwnProperty',0,'','return','N;'),('ViewOwnRequirement',0,'','return','N;'),('ViewOwnSchedule',0,'','return','N;'),('ViewProperty',0,'','','N;'),('ViewPropertyType',0,'','','N;'),('ViewRequirement',0,'','','N;'),('ViewSchedule',0,'','','N;'),('ViewUser',0,'','','N;');
 
 /*Table structure for table `authitemchild` */
 
@@ -65,7 +63,7 @@ CREATE TABLE `authitemchild` (
 
 /*Data for the table `authitemchild` */
 
-insert  into `authitemchild`(`parent`,`child`) values ('admin','author'),('author','createPost'),('admin','deletePost'),('admin','editor'),('author','reader'),('editor','reader'),('reader','readPost'),('author','updateOwnPost'),('editor','updatePost'),('updateOwnPost','updatePost');
+insert  into `authitemchild`(`parent`,`child`) values ('Admin','Client'),('MyProperty','CreateProperty'),('ManagePropertyTypes','CreatePropertyType'),('MyRequirements','CreateRequirement'),('MySchedule','CreateSchedule'),('ManageUsers','CreateUser'),('DeleteRecords','DeleteProperty'),('DeleteRecords','DeletePropertyType'),('ManagePropertyTypes','DeletePropertyType'),('Admin','DeleteRecords'),('DeleteRecords','DeleteRequirement'),('DeleteRecords','DeleteSchedule'),('DeleteRecords','DeleteUser'),('Client','FindProperty'),('ManageProperty','FindProperty'),('ManageRequirements','FindRequirements'),('PropertyOwner','FindRequirements'),('MyProperty','ListOwnProperty'),('MyRequirements','ListOwnRequirement'),('MySchedule','ListOwnSchedule'),('FindProperty','ListProperty'),('ListOwnProperty','ListProperty'),('ManagePropertyTypes','ListPropertyTypes'),('FindRequirements','ListRequirements'),('ListOwnRequirement','ListRequirements'),('ListOwnSchedule','ListSchedules'),('ManageSchedules','ListSchedules'),('ManageUsers','ListUsers'),('Admin','ManageProperty'),('Admin','ManagePropertyTypes'),('Admin','ManageRequirements'),('Admin','ManageSchedules'),('Admin','ManageUsers'),('Client','MyProfile'),('PropertyOwner','MyProfile'),('ManageProperty','MyProperty'),('PropertyOwner','MyProperty'),('Client','MyRequirements'),('ManageRequirements','MyRequirements'),('Client','MySchedule'),('ManageSchedules','MySchedule'),('Admin','PropertyOwner'),('MyProperty','SearchOwnProperty'),('MyRequirements','SearchOwnRequirement'),('MySchedule','SearchOwnSchedule'),('FindProperty','SearchProperty'),('SearchOwnProperty','SearchProperty'),('ManagePropertyTypes','SearchPropertyType'),('FindRequirements','SearchRequirement'),('SearchOwnRequirement','SearchRequirement'),('ManageSchedules','SearchSchedule'),('SearchOwnSchedule','SearchSchedule'),('ManageUsers','SearchUser'),('MyProfile','UpdateOwnProfile'),('MyProperty','UpdateOwnProperty'),('MyRequirements','UpdateOwnRequirement'),('MySchedule','UpdateOwnSchedule'),('ManageProperty','UpdateProperty'),('UpdateOwnProperty','UpdateProperty'),('ManagePropertyTypes','UpdatePropertyType'),('ManageRequirements','UpdateRequirement'),('UpdateOwnRequirement','UpdateRequirement'),('ManageSchedules','UpdateSchedule'),('UpdateOwnSchedule','UpdateSchedule'),('ManageUsers','UpdateUser'),('UpdateOwnProfile','UpdateUser'),('MyProfile','ViewOwnProfile'),('MyProperty','ViewOwnProperty'),('MyRequirements','ViewOwnRequirement'),('MySchedule','ViewOwnSchedule'),('FindProperty','ViewProperty'),('ViewOwnProperty','ViewProperty'),('ManagePropertyTypes','ViewPropertyType'),('FindRequirements','ViewRequirement'),('ViewOwnRequirement','ViewRequirement'),('ManageSchedules','ViewSchedule'),('ViewOwnSchedule','ViewSchedule'),('ManageUsers','ViewUser'),('ViewOwnProfile','ViewUser');
 
 /*Table structure for table `ent_propdetail` */
 
@@ -80,6 +78,7 @@ CREATE TABLE `ent_propdetail` (
   `description` text NOT NULL,
   `fk_owner` int(10) NOT NULL,
   `value` varchar(20) NOT NULL,
+  `dateposted` datetime NOT NULL,
   `status` enum('Available','Leased','Sold') NOT NULL DEFAULT 'Available',
   `photos` text NOT NULL,
   PRIMARY KEY (`id`),
@@ -90,23 +89,6 @@ CREATE TABLE `ent_propdetail` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `ent_propdetail` */
-
-/*Table structure for table `ent_proprecommendation` */
-
-DROP TABLE IF EXISTS `ent_proprecommendation`;
-
-CREATE TABLE `ent_proprecommendation` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `fk_proprequirement` int(10) NOT NULL,
-  `fk_propdetail` int(10) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_recommendedprop` (`fk_propdetail`),
-  KEY `fk_requiredprop` (`fk_proprequirement`),
-  CONSTRAINT `fk_recommendedprop` FOREIGN KEY (`fk_propdetail`) REFERENCES `ent_propdetail` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `fk_requiredprop` FOREIGN KEY (`fk_proprequirement`) REFERENCES `ent_proprequirement` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-/*Data for the table `ent_proprecommendation` */
 
 /*Table structure for table `ent_proprequirement` */
 
@@ -120,6 +102,7 @@ CREATE TABLE `ent_proprequirement` (
   `description` text NOT NULL,
   `fk_client` int(10) NOT NULL,
   `budget` varchar(20) NOT NULL,
+  `dateposted` datetime NOT NULL,
   `status` enum('Pending','Closed') NOT NULL DEFAULT 'Pending',
   PRIMARY KEY (`id`),
   KEY `fk_client` (`fk_client`),
@@ -149,20 +132,19 @@ DROP TABLE IF EXISTS `ent_user`;
 
 CREATE TABLE `ent_user` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
-  `usrtype` enum('Admin','Property Owner','Client') NOT NULL,
+  `usrtype` enum('Admin','PropertyOwner','Client') NOT NULL,
   `fullname` varchar(50) NOT NULL,
   `username` varchar(20) NOT NULL,
   `address` varchar(40) NOT NULL,
   `phone` varchar(10) NOT NULL,
   `email` varchar(40) NOT NULL,
   `password` varchar(100) NOT NULL,
+  `regdate` datetime NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `usrname` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `ent_user` */
-
-insert  into `ent_user`(`id`,`usrtype`,`fullname`,`username`,`address`,`phone`,`email`,`password`) values (2,'Admin','Oremis Administrator','admin','676-80108, KLF','0716674111','admin@oremis.net','nirpxjWri3BBI'),(3,'Property Owner','Oremis Property Owner','pown','6889','0716674188','pown@oremis.net','ni6cwPZ9sHaXA'),(4,'Client','Oremis Client','clnt','76','0299832898','clnt@oremis.net','nixAfxcFBG0a6');
 
 /*Table structure for table `ent_visitschedule` */
 
@@ -173,8 +155,6 @@ CREATE TABLE `ent_visitschedule` (
   `fk_propdetail` int(10) NOT NULL,
   `fk_client` int(10) NOT NULL,
   `datetime` datetime NOT NULL,
-  `date` date NOT NULL,
-  `time` time NOT NULL,
   `paymentcode` varchar(20) NOT NULL,
   `status` enum('Pending','Verified','Nullified') NOT NULL DEFAULT 'Pending',
   PRIMARY KEY (`id`),

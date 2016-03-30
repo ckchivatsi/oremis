@@ -46,6 +46,11 @@
 		<?php echo $form->textField($model,'email',array('size'=>40,'maxlength'=>40)); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->label($model,'regdate'); ?>
+		<?php echo $form->textField($model,'regdate'); ?>
+	</div>
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Search'); ?>
 	</div>

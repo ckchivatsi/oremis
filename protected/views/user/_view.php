@@ -38,6 +38,10 @@
 	<?php echo CHtml::encode($data->password); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('regdate')); ?>:</b>
+	<?php echo CHtml::encode($data->regdate); ?>
+	<br />
+
 	*/ ?>
 
 </div>

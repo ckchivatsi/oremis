@@ -8,8 +8,6 @@
  * @property integer $fk_propdetail
  * @property integer $fk_client
  * @property string $datetime
- * @property string $date
- * @property string $time
  * @property string $paymentcode
  * @property string $status
  *
@@ -35,13 +33,13 @@ class Visitschedule extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('fk_propdetail, fk_client, datetime, date, time, paymentcode', 'required'),
+			array('fk_propdetail, fk_client, datetime, paymentcode', 'required'),
 			array('fk_propdetail, fk_client', 'numerical', 'integerOnly'=>true),
 			array('paymentcode', 'length', 'max'=>20),
 			array('status', 'length', 'max'=>9),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, fk_propdetail, fk_client, datetime, date, time, paymentcode, status', 'safe', 'on'=>'search'),
+			array('id, fk_propdetail, fk_client, datetime, paymentcode, status', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -68,8 +66,6 @@ class Visitschedule extends CActiveRecord
 			'fk_propdetail' => 'Fk Propdetail',
 			'fk_client' => 'Fk Client',
 			'datetime' => 'Datetime',
-			'date' => 'Date',
-			'time' => 'Time',
 			'paymentcode' => 'Paymentcode',
 			'status' => 'Status',
 		);
@@ -97,8 +93,6 @@ class Visitschedule extends CActiveRecord
 		$criteria->compare('fk_propdetail',$this->fk_propdetail);
 		$criteria->compare('fk_client',$this->fk_client);
 		$criteria->compare('datetime',$this->datetime,true);
-		$criteria->compare('date',$this->date,true);
-		$criteria->compare('time',$this->time,true);
 		$criteria->compare('paymentcode',$this->paymentcode,true);
 		$criteria->compare('status',$this->status,true);
 

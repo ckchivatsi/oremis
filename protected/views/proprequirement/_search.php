@@ -47,6 +47,11 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->label($model,'dateposted'); ?>
+		<?php echo $form->textField($model,'dateposted'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'status'); ?>
 		<?php echo $form->textField($model,'status',array('size'=>7,'maxlength'=>7)); ?>
 	</div>

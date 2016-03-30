@@ -25,8 +25,6 @@ $this->menu=array(
 		'fk_propdetail',
 		'fk_client',
 		'datetime',
-		'date',
-		'time',
 		'paymentcode',
 		'status',
 	),

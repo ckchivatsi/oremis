@@ -28,6 +28,7 @@ $this->menu=array(
 		'description',
 		'fk_client',
 		'budget',
+		'dateposted',
 		'status',
 	),
 )); ?>

@@ -41,7 +41,7 @@ class UserController extends Controller
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete',),
-				'users'=>array('admin',),
+				'users'=>array('admin0',),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -75,8 +75,17 @@ class UserController extends Controller
 		{
 			$model->attributes=$_POST['User'];
 			$model->password=crypt($model->password,'nihisa09');
-			if($model->save())
+			$model->regdate=date_create()->format('Y-m-d H-i-s');
+			if($model->save()){
+				//auto-assign role to the new user
+				$auth=new Authassignment;
+				$auth->itemname=$model->usrtype;
+				$auth->userid=$model->id;
+				$auth->save();
+				
 				$this->redirect(array('view','id'=>$model->id));
+			}
+				
 		}
 
 		$this->render('create',array(
@@ -104,8 +113,14 @@ class UserController extends Controller
 		{
 			$model->attributes=$_POST['User'];
 			$model->password=crypt($model->password,'nihisa09');
+			$model->regdate=date_create()->format('Y-m-d H-i-s');
 			if($model->save())
 			{
+				//auto-assign role to the new user
+				$auth=new Authassignment;
+				$auth->itemname=$model->usrtype;
+				$auth->userid=$model->id;
+				$auth->save();
 				// if form inputs are saved
 				$this->redirect(array('view','id'=>$model->id));
 			}

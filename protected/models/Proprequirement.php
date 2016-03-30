@@ -11,10 +11,10 @@
  * @property string $description
  * @property integer $fk_client
  * @property string $budget
+ * @property string $dateposted
  * @property string $status
  *
  * The followings are the available model relations:
- * @property Proprecommendation[] $proprecommendations
  * @property User $fkClient
  * @property Proptype $fkProptype
  */
@@ -36,7 +36,7 @@ class Proprequirement extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('category, fk_proptype, location, description, fk_client, budget', 'required'),
+			array('category, fk_proptype, location, description, fk_client, budget, dateposted', 'required'),
 			array('fk_proptype, fk_client', 'numerical', 'integerOnly'=>true),
 			array('category', 'length', 'max'=>4),
 			array('location', 'length', 'max'=>50),
@@ -44,7 +44,7 @@ class Proprequirement extends CActiveRecord
 			array('status', 'length', 'max'=>7),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, category, fk_proptype, location, description, fk_client, budget, status', 'safe', 'on'=>'search'),
+			array('id, category, fk_proptype, location, description, fk_client, budget, dateposted, status', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -56,7 +56,6 @@ class Proprequirement extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'proprecommendations' => array(self::HAS_MANY, 'Proprecommendation', 'fk_proprequirement'),
 			'fkClient' => array(self::BELONGS_TO, 'User', 'fk_client'),
 			'fkProptype' => array(self::BELONGS_TO, 'Proptype', 'fk_proptype'),
 		);
@@ -75,6 +74,7 @@ class Proprequirement extends CActiveRecord
 			'description' => 'Description',
 			'fk_client' => 'Fk Client',
 			'budget' => 'Budget',
+			'dateposted' => 'Dateposted',
 			'status' => 'Status',
 		);
 	}
@@ -104,6 +104,7 @@ class Proprequirement extends CActiveRecord
 		$criteria->compare('description',$this->description,true);
 		$criteria->compare('fk_client',$this->fk_client);
 		$criteria->compare('budget',$this->budget,true);
+		$criteria->compare('dateposted',$this->dateposted,true);
 		$criteria->compare('status',$this->status,true);
 
 		return new CActiveDataProvider($this, array(

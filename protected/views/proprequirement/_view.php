@@ -34,6 +34,10 @@
 	<br />
 
 	<?php /*
+	<b><?php echo CHtml::encode($data->getAttributeLabel('dateposted')); ?>:</b>
+	<?php echo CHtml::encode($data->dateposted); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('status')); ?>:</b>
 	<?php echo CHtml::encode($data->status); ?>
 	<br />

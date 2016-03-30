@@ -12,6 +12,7 @@
  * @property string $phone
  * @property string $email
  * @property string $password
+ * @property string $regdate
  *
  * The followings are the available model relations:
  * @property Propdetail[] $propdetails
@@ -36,7 +37,7 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('usrtype, fullname, username, address, phone, email, password', 'required'),
+			array('usrtype, fullname, username, address, phone, email, password, regdate', 'required'),
 			array('usrtype', 'length', 'max'=>14),
 			array('fullname', 'length', 'max'=>50),
 			array('username', 'length', 'max'=>20),
@@ -45,7 +46,7 @@ class User extends CActiveRecord
 			array('password', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, usrtype, fullname, username, address, phone, email, password', 'safe', 'on'=>'search'),
+			array('id, usrtype, fullname, username, address, phone, email, password, regdate', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -77,6 +78,7 @@ class User extends CActiveRecord
 			'phone' => 'Phone',
 			'email' => 'Email',
 			'password' => 'Password',
+			'regdate' => 'Regdate',
 		);
 	}
 
@@ -106,6 +108,7 @@ class User extends CActiveRecord
 		$criteria->compare('phone',$this->phone,true);
 		$criteria->compare('email',$this->email,true);
 		$criteria->compare('password',$this->password,true);
+		$criteria->compare('regdate',$this->regdate,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

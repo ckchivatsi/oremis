@@ -32,16 +32,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'date'); ?>
-		<?php echo $form->textField($model,'date'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'time'); ?>
-		<?php echo $form->textField($model,'time'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'paymentcode'); ?>
 		<?php echo $form->textField($model,'paymentcode',array('size'=>20,'maxlength'=>20)); ?>
 	</div>
