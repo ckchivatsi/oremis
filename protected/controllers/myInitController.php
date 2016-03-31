@@ -8,4 +8,13 @@ class myInitController extends Controller
 		else echo Yii::app()->user->role;
 		
 	}
+	
+	public function actionCheckAccess()
+	{
+		if(Yii::app()->user->checkAccess('DeleteProperty')){
+			echo "AUTHORIZED";
+		}else{
+			echo "DENIED";
+		}
+	}
 }

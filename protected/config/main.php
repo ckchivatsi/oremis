@@ -33,38 +33,6 @@ return array(
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
 		
-		// enable admin module//
-		'admin',
-		
-		// enable client module//
-		'client',
-		
-		// enable property owner module//
-		'propertyowner',
-		
-		// enable user module//
-		/* 'user'=>array(
-			# encrypting method (php hash function)
-			'hash' => 'md5',
-			# send activation email
-            'sendActivationMail' => true,
-			# allow access for non-activated users
-			'loginNotActiv' => false,
-			# activate user on registration (only sendActivationMail = false)
-			'activeAfterRegister' => false,
-			# automatically login from registration
-			'autoLogin' => true,
-			# registration path
-			'registrationUrl' => array('/user/registration'),
-			# recovery password path
-			'recoveryUrl' => array('/user/recovery'),
-			# login form path
-			'loginUrl' => array('/user/login'),
-			# page after login
-			'returnUrl' => array('/user/profile'),
-			# page after logout
-			'returnLogoutUrl' => array('/user/login'),
-        ), */
 	),
 
 	// application components
@@ -78,16 +46,17 @@ return array(
 		),
 
 		// uncomment the following to enable URLs in path-format
-		/* 
+		
 		'urlManager'=>array(
 			'urlFormat'=>'path',
+			'showScriptName'=>false,
 			'rules'=>array(
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 		),
-		 */
+		
 
 		// database settings are configured in database.php
 		'db'=>require(dirname(__FILE__).'/database.php'),
