@@ -34,7 +34,20 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'datetime'); ?>
 		<?php//Date and time picker extension for visiting date and time?>
-		<?php Yii::import('application.extensions.CJuiDateTimePicker.CJuiDateTimePicker');
+		<?php/*  $this->widget('zii.widgets.jui.CJuiDateTimePicker',array(
+			'model' => $model, 
+			'attribute' => 'datetime',
+			'mode'=>'datetime',
+			'language' => 'en',
+			'options'=> array(
+				'showOn' => 'both',
+				'dateFormat' => 'yy-mm-dd',
+				'changeYear' => true,
+				'changeMonth' => true,
+				'yearRange' => '2000:2099',
+			),
+		)); */?>
+		<?php /* Yii::import('application.extensions.CJuiDateTimePicker.CJuiDateTimePicker');
 			$this->widget('CJuiDateTimePicker',array(
 				'model'=>$model, //Model object
 				'attribute'=>'datetime', //attribute name
@@ -44,7 +57,7 @@
 					'changeYear' => true,
 					'yearRange' => 'now:2099',
 				) // jquery plugin options
-		)	); ?>
+		)	); */ ?>
 		<?php echo $form->error($model,'datetime'); ?>
 	</div>
 

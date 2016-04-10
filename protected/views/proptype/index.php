@@ -3,16 +3,16 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Proptypes',
+	'Property Types',
 );
 
 $this->menu=array(
-	array('label'=>'Create Proptype', 'url'=>array('create')),
-	array('label'=>'Manage Proptype', 'url'=>array('admin')),
+	array('label'=>'Add Property Type', 'url'=>array('create')),
+	array('label'=>'Manage Property Types', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Proptypes</h1>
+<h1>Property Types</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

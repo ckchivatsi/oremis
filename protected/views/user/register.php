@@ -3,9 +3,6 @@
 /* @var $model User */
 /* @var $form CActiveForm */
 
-$this->menu=array(
-	array('label'=>'Terms & Conditions', 'url'=>array('/site/page', 'view'=>'terms')),
-);
 
 ?>
 
@@ -72,7 +69,8 @@ $this->menu=array(
 	</div>
 	
 	<div class="hint">
-		By clicking <i>Register</i> you agree by the Term & Conditions. 
+		By clicking <i>Register</i> you agree by the 
+		<?php echo CHtml::link('Term & Conditions', array('site/page', 'view'=>'terms')); ?>.
 	</div>
 
 

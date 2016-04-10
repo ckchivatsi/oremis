@@ -3,13 +3,13 @@
 /* @var $model Proptype */
 
 $this->breadcrumbs=array(
-	'Proptypes'=>array('index'),
+	'Property Types'=>array('index'),
 	'Manage',
 );
 
 $this->menu=array(
-	array('label'=>'List Proptype', 'url'=>array('index')),
-	array('label'=>'Create Proptype', 'url'=>array('create')),
+	array('label'=>'List Property Types', 'url'=>array('index')),
+	array('label'=>'Create Property Types', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -26,7 +26,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Proptypes</h1>
+<h1>Manage Property Types</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>

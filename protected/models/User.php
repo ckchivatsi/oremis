@@ -46,7 +46,7 @@ class User extends CActiveRecord
 			array('password', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, usrtype, fullname, username, address, phone, email, password, regdate', 'safe', 'on'=>'search'),
+			array('id, usrtype, fullname, username, address, phone, email, regdate', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -79,6 +79,7 @@ class User extends CActiveRecord
 			'email' => 'Email',
 			'password' => 'Password',
 			'regdate' => 'Registration Date',
+			'newpwd' => 'New Password',
 		);
 	}
 

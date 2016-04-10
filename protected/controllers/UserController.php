@@ -44,6 +44,10 @@ class UserController extends Controller
 				'roles'=>array('UpdateUser'),
 			),
 			array('allow',
+				'actions'=>array('chnpwd'),
+				'roles'=>array('UpdateUser'),
+			),
+			array('allow',
 				'actions'=>array('delete'),
 				'roles'=>array('DeleteUser'),
 			),
@@ -120,9 +124,9 @@ class UserController extends Controller
 		));
 	}
 	
-	/*
+	/**
 		Registration/SignUp Form
-	*/
+	**/
 	public function actionRegister()
 	{
 		$model=new User('register');
@@ -178,6 +182,30 @@ class UserController extends Controller
 		}
 
 		$this->render('update',array(
+			'model'=>$model,
+		));
+	}
+	
+	/**
+		Change User Password
+	**/
+	
+	public function actionChnPwd($id)
+	{	
+		$model=$this->loadModel($id);		
+		
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST['User']))
+		{
+			$model->attributes=$_POST['User'];
+			$model->password=crypt($model->password,'nihisa09');
+			if($model->save())
+				$this->redirect(array('view','id'=>$model->id));
+		}
+
+		$this->render('chnpwd',array(
 			'model'=>$model,
 		));
 	}

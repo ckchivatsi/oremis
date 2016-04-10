@@ -3,16 +3,16 @@
 /* @var $model Proptype */
 
 $this->breadcrumbs=array(
-	'Proptypes'=>array('index'),
-	'Create',
+	'Property Types'=>array('index'),
+	'Add',
 );
 
 $this->menu=array(
-	array('label'=>'List Proptype', 'url'=>array('index')),
-	array('label'=>'Manage Proptype', 'url'=>array('admin')),
+	array('label'=>'List Property Types', 'url'=>array('index')),
+	array('label'=>'Manage Property Types', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Proptype</h1>
+<h1>Add Property Type</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
