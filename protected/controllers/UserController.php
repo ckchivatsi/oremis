@@ -27,21 +27,37 @@ class UserController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view',),
-				'users'=>array('*'),
+			array('allow',
+				'actions'=>array('view'),
+				'roles'=>array('ViewUser'),
 			),
-			array('allow',  // allow anonymous users to perform 'register' actions
+			array('allow',
+				'actions'=>array('viewprofile'),
+				'roles'=>array('ViewOwnProfile'),
+			),
+			array('allow',
+				'actions'=>array('create'),
+				'roles'=>array('CreateUser'),
+			),
+			array('allow',
+				'actions'=>array('update'),
+				'roles'=>array('UpdateUser'),
+			),
+			array('allow',
+				'actions'=>array('delete'),
+				'roles'=>array('DeleteUser'),
+			),
+			array('allow',
+				'actions'=>array('index'),
+				'roles'=>array('ListUsers'),
+			),
+			array('allow',
+				'actions'=>array('admin'),
+				'roles'=>array('SearchUser'),
+			),
+			array('allow',
 				'actions'=>array('register'),
-				'users'=>array('?','admin'),
-			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update',),
-				'users'=>array('@'),
-			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete',),
-				'roles'=>array('Admin',),
+				'users'=>array('?'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -57,6 +73,16 @@ class UserController extends Controller
 	{
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
+		));
+	}
+	
+	/**
+		Display user profile.
+	**/
+	public function actionViewProfile($username)
+	{
+		$this->render('view',array(
+			'model'=>$this->loadProfile($username),
 		));
 	}
 
@@ -175,7 +201,17 @@ class UserController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('User');
+		$user=User::model()->findByAttributes(array('username'=>Yii::app()->user->name));
+		if(Yii::app()->user->role!="Admin"){
+			$dataProvider=new CActiveDataProvider('User', array(
+				'criteria'=>array(
+					'condition'=>'id='.$user->id,
+				),
+			));
+		}
+		else{
+			$dataProvider=new CActiveDataProvider('User');
+		}
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -206,6 +242,17 @@ class UserController extends Controller
 	public function loadModel($id)
 	{
 		$model=User::model()->findByPk($id);
+		if($model===null)
+			throw new CHttpException(404,'The requested page does not exist.');
+		return $model;
+	}
+	
+	/**
+		Returns the data model based on the username given in the GET variable.
+	**/
+	public function loadProfile($username)
+	{
+		$model=User::model()->findByAttributes(array('username'=>$username));
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;

@@ -28,6 +28,10 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'fk_proptype'); ?>
 		<?php echo $form->textField($model,'fk_proptype'); ?>
+		<?php echo $form->dropDownList($model,'usrtype',
+									CHtml::listData(proptype::model()->findAll(
+										array('order' => 'name ASC')), 'id' , 'name'),
+									array('prompt'=>'Select Component Type')); ?>
 		<?php echo $form->error($model,'fk_proptype'); ?>
 	</div>
 

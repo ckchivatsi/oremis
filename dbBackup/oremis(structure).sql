@@ -97,7 +97,7 @@ CREATE TABLE `ent_proprequirement` (
   KEY `fk_requiredproptype` (`fk_proptype`),
   CONSTRAINT `fk_client` FOREIGN KEY (`fk_client`) REFERENCES `ent_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_requiredproptype` FOREIGN KEY (`fk_proptype`) REFERENCES `ent_proptype` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 /*Table structure for table `ent_proptype` */
 
@@ -108,7 +108,7 @@ CREATE TABLE `ent_proptype` (
   `name` varchar(30) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 /*Table structure for table `ent_user` */
 
@@ -126,7 +126,7 @@ CREATE TABLE `ent_user` (
   `regdate` datetime NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `usrname` (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 /*Table structure for table `ent_visitschedule` */
 

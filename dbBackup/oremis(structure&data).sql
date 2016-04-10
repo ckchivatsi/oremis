@@ -31,6 +31,8 @@ CREATE TABLE `authassignment` (
 
 /*Data for the table `authassignment` */
 
+insert  into `authassignment`(`itemname`,`userid`,`bizrule`,`data`) values ('Admin','admin0',NULL,'N;'),('Client','client',NULL,'N;'),('PropertyOwner','pown',NULL,'N;');
+
 /*Table structure for table `authitem` */
 
 DROP TABLE IF EXISTS `authitem`;
@@ -46,7 +48,7 @@ CREATE TABLE `authitem` (
 
 /*Data for the table `authitem` */
 
-insert  into `authitem`(`name`,`type`,`description`,`bizrule`,`data`) values ('Admin',2,'','','N;'),('Client',2,'','','N;'),('CreateProperty',0,'','','N;'),('CreatePropertyType',0,'','','N;'),('CreateRequirement',0,'','','N;'),('CreateSchedule',0,'','','N;'),('CreateUser',0,'','','N;'),('DeleteProperty',0,'','','N;'),('DeletePropertyType',0,'','','N;'),('DeleteRecords',1,'','','N;'),('DeleteRequirement',0,'','','N;'),('DeleteSchedule',0,'','','N;'),('DeleteUser',0,'','','N;'),('FindProperty',1,'','','N;'),('FindRequirements',1,'','','N;'),('ListOwnProperty',0,'','return','N;'),('ListOwnRequirement',0,'','return','N;'),('ListOwnSchedule',0,'','return','N;'),('ListProperty',0,'','','N;'),('ListPropertyTypes',0,'','','N;'),('ListRequirements',0,'','','N;'),('ListSchedules',0,'','','N;'),('ListUsers',0,'','','N;'),('ManageProperty',1,'','','N;'),('ManagePropertyTypes',1,'','','N;'),('ManageRequirements',1,'','','N;'),('ManageSchedules',1,'','','N;'),('ManageUsers',1,'','','N;'),('MyProfile',1,'','','N;'),('MyProperty',1,'','','N;'),('MyRequirements',1,'','','N;'),('MySchedule',1,'','','N;'),('PropertyOwner',2,'','','N;'),('SearchOwnProperty',0,'','return','N;'),('SearchOwnRequirement',0,'','return','N;'),('SearchOwnSchedule',0,'','return','N;'),('SearchProperty',0,'','','N;'),('SearchPropertyType',0,'','','N;'),('SearchRequirement',0,'','','N;'),('SearchSchedule',0,'','','N;'),('SearchUser',0,'','','N;'),('UpdateOwnProfile',0,'','return','N;'),('UpdateOwnProperty',0,'','return','N;'),('UpdateOwnRequirement',0,'','return','N;'),('UpdateOwnSchedule',0,'','return','N;'),('UpdateProperty',0,'','','N;'),('UpdatePropertyType',0,'','','N;'),('UpdateRequirement',0,'','','N;'),('UpdateSchedule',0,'','','N;'),('UpdateUser',0,'','','N;'),('ViewOwnProfile',0,'','return','N;'),('ViewOwnProperty',0,'','return','N;'),('ViewOwnRequirement',0,'','return','N;'),('ViewOwnSchedule',0,'','return','N;'),('ViewProperty',0,'','','N;'),('ViewPropertyType',0,'','','N;'),('ViewRequirement',0,'','','N;'),('ViewSchedule',0,'','','N;'),('ViewUser',0,'','','N;');
+insert  into `authitem`(`name`,`type`,`description`,`bizrule`,`data`) values ('Admin',2,'','','N;'),('Client',2,'','','N;'),('CreateProperty',0,'','','N;'),('CreatePropertyType',0,'','','N;'),('CreateRequirement',0,'','','N;'),('CreateSchedule',0,'','','N;'),('CreateUser',0,'','','N;'),('DeleteProperty',0,'','','N;'),('DeletePropertyType',0,'','','N;'),('DeleteRecords',1,'','','N;'),('DeleteRequirement',0,'','','N;'),('DeleteSchedule',0,'','','N;'),('DeleteUser',0,'','','N;'),('FindProperty',1,'','','N;'),('FindRequirements',1,'','','N;'),('ListOwnProperty',0,'','','N;'),('ListOwnRequirement',0,'','','N;'),('ListOwnSchedule',0,'','','N;'),('ListProperty',0,'','','N;'),('ListPropertyTypes',0,'','','N;'),('ListRequirements',0,'','','N;'),('ListSchedules',0,'','','N;'),('ListUsers',0,'','','N;'),('ManageProperty',1,'','','N;'),('ManagePropertyTypes',1,'','','N;'),('ManageRequirements',1,'','','N;'),('ManageSchedules',1,'','','N;'),('ManageUsers',1,'','','N;'),('MyProfile',1,'','','N;'),('MyProperty',1,'','','N;'),('MyRequirements',1,'','','N;'),('MySchedule',1,'','','N;'),('PropertyOwner',2,'','','N;'),('SearchOwnProperty',0,'','','N;'),('SearchOwnRequirement',0,'','','N;'),('SearchOwnSchedule',0,'','','N;'),('SearchProperty',0,'','','N;'),('SearchPropertyType',0,'','','N;'),('SearchRequirement',0,'','','N;'),('SearchSchedule',0,'','','N;'),('SearchUser',0,'','','N;'),('UpdateOwnProfile',0,'','','N;'),('UpdateOwnProperty',0,'','','N;'),('UpdateOwnRequirement',0,'','','N;'),('UpdateOwnSchedule',0,'','','N;'),('UpdateProperty',0,'','','N;'),('UpdatePropertyType',0,'','','N;'),('UpdateRequirement',0,'','','N;'),('UpdateSchedule',0,'','','N;'),('UpdateUser',0,'','','N;'),('ViewOwnProfile',0,'','','N;'),('ViewOwnProperty',0,'','','N;'),('ViewOwnRequirement',0,'','','N;'),('ViewOwnSchedule',0,'','','N;'),('ViewProperty',0,'','','N;'),('ViewPropertyType',0,'','','N;'),('ViewRequirement',0,'','','N;'),('ViewSchedule',0,'','','N;'),('ViewUser',0,'','','N;');
 
 /*Table structure for table `authitemchild` */
 
@@ -109,9 +111,11 @@ CREATE TABLE `ent_proprequirement` (
   KEY `fk_requiredproptype` (`fk_proptype`),
   CONSTRAINT `fk_client` FOREIGN KEY (`fk_client`) REFERENCES `ent_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_requiredproptype` FOREIGN KEY (`fk_proptype`) REFERENCES `ent_proptype` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 /*Data for the table `ent_proprequirement` */
+
+insert  into `ent_proprequirement`(`id`,`category`,`fk_proptype`,`location`,`description`,`fk_client`,`budget`,`dateposted`,`status`) values (1,'Rent',1,'Mombasa','bla bla bla bla',2,'20Million','2016-04-08 15:31:14','Pending');
 
 /*Table structure for table `ent_proptype` */
 
@@ -122,9 +126,11 @@ CREATE TABLE `ent_proptype` (
   `name` varchar(30) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 /*Data for the table `ent_proptype` */
+
+insert  into `ent_proptype`(`id`,`name`) values (1,'Flat');
 
 /*Table structure for table `ent_user` */
 
@@ -142,9 +148,11 @@ CREATE TABLE `ent_user` (
   `regdate` datetime NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `usrname` (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 /*Data for the table `ent_user` */
+
+insert  into `ent_user`(`id`,`usrtype`,`fullname`,`username`,`address`,`phone`,`email`,`password`,`regdate`) values (1,'Admin','Oremis Client','admin0','676-80108, KLF','0299832898','asa@ads','nizjiRPTnADdE','2016-03-30 21:24:27'),(2,'Client','Oremis Client','client','6889','0716674111','scs@ks','nizjiRPTnADdE','2016-03-31 15:34:21'),(3,'PropertyOwner','Oremis Property Owner','pown','676-80108, KLF','0299832898','jnhas@knmsd','nizjiRPTnADdE','2016-03-31 16:34:28');
 
 /*Table structure for table `ent_visitschedule` */
 

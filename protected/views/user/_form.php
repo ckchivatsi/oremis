@@ -21,7 +21,10 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'usrtype'); ?>
-		<?php echo $form->textField($model,'usrtype',array('size'=>14,'maxlength'=>14)); ?>
+		<?php //echo $form->textField($model,'usrtype',array('size'=>14,'maxlength'=>14)); ?>
+		<?php echo $form->dropDownList($model,'usrtype',
+									array('Admin'=>'Admin','Client'=>'Client','PropertyOwner'=>'Property Owner'),
+									array('prompt'=>'Select User Type')); ?>
 		<?php echo $form->error($model,'usrtype'); ?>
 	</div>
 
@@ -59,12 +62,6 @@
 		<?php echo $form->labelEx($model,'password'); ?>
 		<?php echo $form->passwordField($model,'password',array('size'=>60,'maxlength'=>100)); ?>
 		<?php echo $form->error($model,'password'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'regdate'); ?>
-		<?php echo $form->textField($model,'regdate'); ?>
-		<?php echo $form->error($model,'regdate'); ?>
 	</div>
 
 	<div class="row buttons">

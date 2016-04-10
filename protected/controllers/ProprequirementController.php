@@ -27,17 +27,29 @@ class ProprequirementController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
+			array('allow',
+				'actions'=>array('view'),
+				'roles'=>array('ViewRequirement'),
 			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
-				'users'=>array('@'),
+			array('allow',
+				'actions'=>array('create'),
+				'roles'=>array('CreateRequirement'),
 			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+			array('allow',
+				'actions'=>array('update'),
+				'roles'=>array('UpdateRequirement'),
+			),
+			array('allow',
+				'actions'=>array('delete'),
+				'roles'=>array('DeleteRequirement'),
+			),
+			array('allow',
+				'actions'=>array('index'),
+				'roles'=>array('ListRequirements'),
+			),
+			array('allow',
+				'actions'=>array('admin'),
+				'roles'=>array('SearchRequirement'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -123,7 +135,17 @@ class ProprequirementController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Proprequirement');
+		$client=User::model()->findByAttributes(array('username'=>Yii::app()->user->name));
+		if(Yii::app()->user->role!="Admin"){
+			$dataProvider=new CActiveDataProvider('Proprequirement', array(
+				'criteria'=>array(
+					'condition'=>'fk_client='.$client->id,
+				),
+			));
+		}
+		else{
+			$dataProvider=new CActiveDataProvider('Proprequirement');
+		}
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));

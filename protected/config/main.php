@@ -7,7 +7,8 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'ONLINE REAL ESTATE MANAGEMENT SYSTEM',
+	//'name'=>'ONLINE REAL ESTATE MANAGEMENT SYSTEM',
+	'name'=>'OREMIS',
 	
 	'theme'=>'paris',
 
@@ -47,7 +48,7 @@ return array(
 
 		// uncomment the following to enable URLs in path-format
 		
-		'urlManager'=>array(
+		/* 'urlManager'=>array(
 			'urlFormat'=>'path',
 			'showScriptName'=>false,
 			'rules'=>array(
@@ -55,7 +56,7 @@ return array(
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
-		),
+		), */
 		
 
 		// database settings are configured in database.php
@@ -95,5 +96,6 @@ return array(
 	'params'=>array(
 		// this is used in contact page
 		'adminEmail'=>'info@oremis.net',
+		//'user'=>User::model()->findByAttributes(array('username'=>Yii::app()->user->name)),
 	),
 );

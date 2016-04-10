@@ -71,14 +71,14 @@ class User extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'usrtype' => 'Usrtype',
-			'fullname' => 'Fullname',
+			'usrtype' => 'User Type',
+			'fullname' => 'Full Name',
 			'username' => 'Username',
 			'address' => 'Address',
 			'phone' => 'Phone',
 			'email' => 'Email',
 			'password' => 'Password',
-			'regdate' => 'Regdate',
+			'regdate' => 'Registration Date',
 		);
 	}
 

@@ -2,7 +2,14 @@
 /* @var $this UserController */
 /* @var $model User */
 /* @var $form CActiveForm */
+
+$this->menu=array(
+	array('label'=>'Terms & Conditions', 'url'=>array('/site/page', 'view'=>'terms')),
+);
+
 ?>
+
+<h1>Register</h1>
 
 <div class="form">
 
@@ -21,7 +28,10 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'usrtype'); ?>
-		<?php echo $form->textField($model,'usrtype',array('size'=>14,'maxlength'=>14)); ?>
+		<?php //echo $form->textField($model,'usrtype',array('size'=>14,'maxlength'=>14)); ?>
+		<?php echo $form->dropDownList($model,'usrtype',
+									array('Admin'=>'Admin','Client'=>'Client','PropertyOwner'=>'Property Owner'),
+									array('prompt'=>'Select User Type')); ?>
 		<?php echo $form->error($model,'usrtype'); ?>
 	</div>
 
@@ -60,10 +70,14 @@
 		<?php echo $form->passwordField($model,'password',array('size'=>60,'maxlength'=>100)); ?>
 		<?php echo $form->error($model,'password'); ?>
 	</div>
+	
+	<div class="hint">
+		By clicking <i>Register</i> you agree by the Term & Conditions. 
+	</div>
 
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Submit'); ?>
+		<?php echo CHtml::submitButton('Register'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
