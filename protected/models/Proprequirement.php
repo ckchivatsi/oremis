@@ -69,12 +69,12 @@ class Proprequirement extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'category' => 'Category',
-			'fk_proptype' => 'Fk Proptype',
+			'fk_proptype' => 'Property Type',
 			'location' => 'Location',
 			'description' => 'Description',
-			'fk_client' => 'Fk Client',
-			'budget' => 'Budget',
-			'dateposted' => 'Dateposted',
+			'fk_client' => 'Client',
+			'budget' => 'Budget(KSh.)',
+			'dateposted' => 'Date Posted',
 			'status' => 'Status',
 		);
 	}
@@ -101,7 +101,6 @@ class Proprequirement extends CActiveRecord
 		$criteria->compare('category',$this->category,true);
 		$criteria->compare('fk_proptype',$this->fk_proptype);
 		$criteria->compare('location',$this->location,true);
-		$criteria->compare('description',$this->description,true);
 		$criteria->compare('fk_client',$this->fk_client);
 		$criteria->compare('budget',$this->budget,true);
 		$criteria->compare('dateposted',$this->dateposted,true);
@@ -121,5 +120,23 @@ class Proprequirement extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+	
+	/**
+		Function to get the property type name displayed instead of the id
+	**/
+	public function getPropertyType()
+	{
+		$proptype=Proptype::model()->findByAttributes(array('id'=>$this->fk_proptype));
+		return $proptype->name;
+	}
+	
+	/**
+		Function to get the client name displayed instead of the id
+	**/
+	public function getClientName()
+	{
+		$client=User::model()->findByAttributes(array('id'=>$this->fk_client));
+		return $client->fullname;
 	}
 }

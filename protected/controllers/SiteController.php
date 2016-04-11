@@ -72,36 +72,6 @@ class SiteController extends Controller
 		$this->render('contact',array('model'=>$model));
 	}
 
-	/*
-		Registration/SignUp Form
-	*/
-/*	public function actionRegister()
-	{
-		$model=new User('register');
-*/
-		// uncomment the following code to enable ajax-based validation
-		/*
-		if(isset($_POST['ajax']) && $_POST['ajax']==='user-register-form')
-		{
-			echo CActiveForm::validate($model);
-			Yii::app()->end();
-		}
-		*/
-
-/*		if(isset($_POST['User']))
-		{
-			$model->attributes=$_POST['User'];
-			if($model->validate())
-			{
-				// form inputs are valid, do something here
-				return;
-			}
-		}
-		$this->render('register',array(
-			'model'=>$model
-		));
-	}
-*/	
 	/**
 	 * Displays the login page
 	 */
@@ -125,7 +95,12 @@ class SiteController extends Controller
 				$this->redirect(Yii::app()->user->returnUrl);
 		}
 		// display the login form
-		$this->render('login',array('model'=>$model));
+		if(Yii::app()->user->isGuest){
+			$this->render('login',array('model'=>$model));
+		}else{
+			$this->redirect(Yii::app()->homeUrl);
+		}
+		
 	}
 
 	/**

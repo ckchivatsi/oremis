@@ -11,6 +11,7 @@ $this->menu=array(
 	array('label'=>'List User', 'url'=>array('index'), 'visible'=>Yii::app()->user->checkAccess('ListUsers')),
 	array('label'=>'Create User', 'url'=>array('create'), 'visible'=>Yii::app()->user->checkAccess('CreateUser')),
 	array('label'=>'Update Profile', 'url'=>array('update', 'id'=>$model->id), 'visible'=>Yii::app()->user->checkAccess('UpdateUser')),
+	array('label'=>'Change Password', 'url'=>array('chnpwd', 'id'=>$model->id), 'visible'=>Yii::app()->user->checkAccess('UpdateUser')),
 	array('label'=>'Delete User', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?'), 'visible'=>Yii::app()->user->checkAccess('DeleteUser')),
 	array('label'=>'Search User', 'url'=>array('admin'), 'visible'=>Yii::app()->user->checkAccess('SearchUser')),
 );

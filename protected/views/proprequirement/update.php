@@ -3,19 +3,19 @@
 /* @var $model Proprequirement */
 
 $this->breadcrumbs=array(
-	'Proprequirements'=>array('index'),
+	'Property Requirements'=>array('index'),
 	$model->id=>array('view','id'=>$model->id),
-	'Update',
+	'Update Details',
 );
 
 $this->menu=array(
-	array('label'=>'List Proprequirement', 'url'=>array('index')),
-	array('label'=>'Create Proprequirement', 'url'=>array('create')),
-	array('label'=>'View Proprequirement', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Proprequirement', 'url'=>array('admin')),
+	array('label'=>'List Requirements', 'url'=>array('index'), 'url'=>array('index'), 'visible'=>Yii::app()->user->checkAccess('ListRequirements')),
+	array('label'=>'Post Requirement', 'url'=>array('create'), 'visible'=>Yii::app()->user->checkAccess('CreateRequirement')),
+	array('label'=>'View Requirement', 'url'=>array('view', 'id'=>$model->id), 'visible'=>Yii::app()->user->checkAccess('ViewRequirement')),
+	array('label'=>'Search Requirements', 'url'=>array('admin'), 'visible'=>Yii::app()->user->checkAccess('SearchRequirement')),
 );
 ?>
 
-<h1>Update Proprequirement <?php echo $model->id; ?></h1>
+<h1>Update Requirement Details</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

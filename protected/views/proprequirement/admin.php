@@ -3,13 +3,13 @@
 /* @var $model Proprequirement */
 
 $this->breadcrumbs=array(
-	'Proprequirements'=>array('index'),
-	'Manage',
+	'Property Requirements'=>array('index'),
+	'Search',
 );
 
 $this->menu=array(
-	array('label'=>'List Proprequirement', 'url'=>array('index')),
-	array('label'=>'Create Proprequirement', 'url'=>array('create')),
+	array('label'=>'List Requirements', 'url'=>array('index'), 'visible'=>Yii::app()->user->checkAccess('ListRequirements')),
+	array('label'=>'Post Requirement', 'url'=>array('create'), 'visible'=>Yii::app()->user->checkAccess('CreateRequirement')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -26,15 +26,17 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Proprequirements</h1>
+<h1>Search Property Requirements</h1>
 
+<p>
+Click on <?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?> for more search options.
+</p>
+
+<div class="search-form" style="display:none">
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
 or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
 </p>
-
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
-<div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,
 )); ?>
@@ -45,17 +47,15 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'id',
+		//'id',
 		'category',
-		'fk_proptype',
+		//'fk_proptype',
 		'location',
 		'description',
-		'fk_client',
-		/*
+		//'fk_client',		
 		'budget',
-		'dateposted',
-		'status',
-		*/
+		//'dateposted',
+		'status',		
 		array(
 			'class'=>'CButtonColumn',
 		),

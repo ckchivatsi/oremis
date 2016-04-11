@@ -3,16 +3,16 @@
 /* @var $model Proprequirement */
 
 $this->breadcrumbs=array(
-	'Proprequirements'=>array('index'),
-	'Create',
+	'Property Requirements'=>array('index'),
+	'Add',
 );
 
 $this->menu=array(
-	array('label'=>'List Proprequirement', 'url'=>array('index')),
-	array('label'=>'Manage Proprequirement', 'url'=>array('admin')),
+	array('label'=>'List Requirements', 'url'=>array('index'), 'visible'=>Yii::app()->user->checkAccess('ListRequirements')),
+	array('label'=>'Search Requirements', 'url'=>array('admin'), 'visible'=>Yii::app()->user->checkAccess('SearchRequirement')),
 );
 ?>
 
-<h1>Create Proprequirement</h1>
+<h1>Post Property Requirement</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -3,16 +3,16 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Proprequirements',
+	'Property Requirements',
 );
 
 $this->menu=array(
-	array('label'=>'Create Proprequirement', 'url'=>array('create')),
-	array('label'=>'Manage Proprequirement', 'url'=>array('admin')),
+	array('label'=>'Post Requirement', 'url'=>array('create'), 'visible'=>Yii::app()->user->checkAccess('CreateRequirement')),
+	array('label'=>'Search Requirements', 'url'=>array('admin'), 'visible'=>Yii::app()->user->checkAccess('SearchRequirement')),
 );
 ?>
 
-<h1>Proprequirements</h1>
+<h1>Property Requirements</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
