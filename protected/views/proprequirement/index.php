@@ -12,7 +12,14 @@ $this->menu=array(
 );
 ?>
 
-<h1>Property Requirements</h1>
+<h1> 
+<?php 
+if(Yii::app()->user->role!="Admin")
+	echo "My";
+else
+	echo "Property";
+?> 
+Requirements</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

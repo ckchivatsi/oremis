@@ -74,13 +74,13 @@ class Propdetail extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'category' => 'Category',
-			'fk_proptype' => 'Fk Proptype',
-			'name' => 'Name',
+			'fk_proptype' => 'Property Type',
+			'name' => 'Property Name',
 			'location' => 'Location',
 			'description' => 'Description',
-			'fk_owner' => 'Fk Owner',
-			'value' => 'Value',
-			'dateposted' => 'Dateposted',
+			'fk_owner' => 'Property Owner',
+			'value' => 'Value(KSh.)',
+			'dateposted' => 'Date Posted',
 			'status' => 'Status',
 			'photos' => 'Photos',
 		);
@@ -130,5 +130,23 @@ class Propdetail extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+	
+	/**
+		Function to get the property type name displayed instead of the id
+	**/
+	public function getPropertyType()
+	{
+		$proptype=Proptype::model()->findByAttributes(array('id'=>$this->fk_proptype));
+		return $proptype->name;
+	}
+	
+	/**
+		Function to get the Property Owner name displayed instead of the id
+	**/
+	public function getPropertyOwnerName()
+	{
+		$powner=User::model()->findByAttributes(array('id'=>$this->fk_owner));
+		return $powner->fullname;
 	}
 }

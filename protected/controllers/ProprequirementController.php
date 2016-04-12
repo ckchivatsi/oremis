@@ -160,6 +160,7 @@ class ProprequirementController extends Controller
 	{
 		$model=new Proprequirement('search');
 		$model->unsetAttributes();  // clear any default values
+		$model->status="Pending";
 		if(isset($_GET['Proprequirement']))
 			$model->attributes=$_GET['Proprequirement'];
 

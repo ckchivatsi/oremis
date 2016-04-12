@@ -75,7 +75,7 @@ CREATE TABLE `ent_location` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=latin1;
 
 /*Data for the table `ent_location` */
 
@@ -102,9 +102,11 @@ CREATE TABLE `ent_propdetail` (
   KEY `fk_proptype` (`fk_proptype`),
   CONSTRAINT `fk_propowner` FOREIGN KEY (`fk_owner`) REFERENCES `ent_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_proptype` FOREIGN KEY (`fk_proptype`) REFERENCES `ent_proptype` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 /*Data for the table `ent_propdetail` */
+
+insert  into `ent_propdetail`(`id`,`category`,`fk_proptype`,`name`,`location`,`description`,`fk_owner`,`value`,`dateposted`,`status`,`photos`) values (1,'Sell',1,'Homechoice','Kilifi','very tall building found in a serene environment',3,'10M','2016-04-12 21:52:50','Available','.');
 
 /*Table structure for table `ent_proprequirement` */
 

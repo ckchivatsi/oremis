@@ -81,7 +81,9 @@ class PropdetailController extends Controller
 
 		if(isset($_POST['Propdetail']))
 		{
+			$powner=User::model()->findByAttributes(array('username'=>Yii::app()->user->name));
 			$model->attributes=$_POST['Propdetail'];
+			$model->fk_owner=$powner->id;
 			$model->dateposted=date_create()->format('Y-m-d H-i-s');
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
@@ -135,11 +137,11 @@ class PropdetailController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$owner=User::model()->findByAttributes(array('username'=>Yii::app()->user->name));
+		$powner=User::model()->findByAttributes(array('username'=>Yii::app()->user->name));
 		if(Yii::app()->user->role!="Admin"){
 			$dataProvider=new CActiveDataProvider('Propdetail', array(
 				'criteria'=>array(
-					'condition'=>'fk_client='.$owner->id,
+					'condition'=>'fk_owner='.$powner->id,
 				),
 			));
 		}
@@ -158,6 +160,7 @@ class PropdetailController extends Controller
 	{
 		$model=new Propdetail('search');
 		$model->unsetAttributes();  // clear any default values
+		$model->status="Available";
 		if(isset($_GET['Propdetail']))
 			$model->attributes=$_GET['Propdetail'];
 

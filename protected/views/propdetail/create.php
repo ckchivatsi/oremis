@@ -3,16 +3,16 @@
 /* @var $model Propdetail */
 
 $this->breadcrumbs=array(
-	'Propdetails'=>array('index'),
-	'Create',
+	'Property'=>array('index'),
+	'Add',
 );
 
 $this->menu=array(
-	array('label'=>'List Propdetail', 'url'=>array('index')),
-	array('label'=>'Manage Propdetail', 'url'=>array('admin')),
+	array('label'=>'List Property', 'url'=>array('index'), 'visible'=>Yii::app()->user->checkAccess('ListProperty')),
+	array('label'=>'Manage Property', 'url'=>array('admin'), 'visible'=>Yii::app()->user->checkAccess('SearchProperty')),
 );
 ?>
 
-<h1>Create Propdetail</h1>
+<h1>Post Property</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

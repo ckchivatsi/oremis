@@ -18,12 +18,18 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'category'); ?>
-		<?php echo $form->textField($model,'category',array('size'=>4,'maxlength'=>4)); ?>
+		<?php //echo $form->textField($model,'category',array('size'=>4,'maxlength'=>4)); ?>
+		<?php echo $form->dropDownList($model,'category',
+			array('Sell'=>'Sell','Rent'=>'Rent'),
+			array('prompt'=>'Select Category')); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'fk_proptype'); ?>
-		<?php echo $form->textField($model,'fk_proptype'); ?>
+		<?php //echo $form->textField($model,'fk_proptype'); ?>
+		<?php echo $form->dropDownList($model,'fk_proptype',CHtml::listData(Proptype::model()->findAll(
+			array('order' => 'name ASC')), 'id' , 'name'),
+			array('prompt'=>'Select Property Type')); ?>
 	</div>
 
 	<div class="row">
@@ -33,17 +39,10 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'location'); ?>
-		<?php echo $form->textField($model,'location',array('size'=>60,'maxlength'=>100)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'description'); ?>
-		<?php echo $form->textArea($model,'description',array('rows'=>6, 'cols'=>50)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'fk_owner'); ?>
-		<?php echo $form->textField($model,'fk_owner'); ?>
+		<?php //echo $form->textField($model,'location',array('size'=>60,'maxlength'=>100)); ?>
+		<?php echo $form->dropDownList($model,'location',CHtml::listData(Location::model()->findAll(
+			array('order' => 'name ASC')), 'name' , 'name'),
+			array('prompt'=>'Select Location(county)')); ?>
 	</div>
 
 	<div class="row">
@@ -61,10 +60,6 @@
 		<?php echo $form->textField($model,'status',array('size'=>9,'maxlength'=>9)); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->label($model,'photos'); ?>
-		<?php echo $form->textArea($model,'photos',array('rows'=>6, 'cols'=>50)); ?>
-	</div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Search'); ?>
