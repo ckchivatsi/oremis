@@ -3,16 +3,20 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Visitschedules',
+	'Visit Schedules',
 );
 
 $this->menu=array(
-	array('label'=>'Create Visitschedule', 'url'=>array('create')),
-	array('label'=>'Manage Visitschedule', 'url'=>array('admin')),
+	array('label'=>'Manage Schedules', 'url'=>array('admin'), 'visible'=>Yii::app()->user->checkAccess('SearchSchedule')),
 );
 ?>
 
-<h1>Visitschedules</h1>
+<h1> 
+<?php 
+if(Yii::app()->user->role!="Admin")
+	echo "My";
+?> 
+Visit Schedules</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

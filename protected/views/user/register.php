@@ -70,7 +70,8 @@
 	
 	<div class="hint">
 		By clicking <i>Register</i> you agree by the 
-		<?php echo CHtml::link('Term & Conditions', array('site/page', 'view'=>'terms')); ?>.
+		<?php echo CHtml::link('Term & Conditions', array('site/page', 'view'=>'terms')); ?>
+		 of OREMIS.
 	</div>
 
 

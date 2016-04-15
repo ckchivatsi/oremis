@@ -3,19 +3,18 @@
 /* @var $model Visitschedule */
 
 $this->breadcrumbs=array(
-	'Visitschedules'=>array('index'),
+	'Visit Schedules'=>array('index'),
 	$model->id=>array('view','id'=>$model->id),
 	'Update',
 );
 
 $this->menu=array(
-	array('label'=>'List Visitschedule', 'url'=>array('index')),
-	array('label'=>'Create Visitschedule', 'url'=>array('create')),
-	array('label'=>'View Visitschedule', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Visitschedule', 'url'=>array('admin')),
+	array('label'=>'Visit Schedules', 'url'=>array('index'), 'visible'=>Yii::app()->user->checkAccess('ListSchedules')),
+	array('label'=>'View Schedule', 'url'=>array('view', 'id'=>$model->id), 'visible'=>Yii::app()->user->checkAccess('ViewSchedule')),
+	array('label'=>'Manage Schedules', 'url'=>array('admin'), 'visible'=>Yii::app()->user->checkAccess('SearchSchedule')),
 );
 ?>
 
-<h1>Update Visitschedule <?php echo $model->id; ?></h1>
+<h1>Update Schedule Details</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

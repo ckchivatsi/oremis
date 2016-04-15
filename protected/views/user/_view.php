@@ -6,7 +6,7 @@
 <div class="view">
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('username')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->username), array('view', 'id'=>$data->id)); ?>
+	<?php echo CHtml::encode($data->username); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('fullname')); ?>:</b>
@@ -16,12 +16,12 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('usrtype')); ?>:</b>
 	<?php echo CHtml::encode($data->usrtype); ?>
 	<br />
-
-	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('id')); ?>:</b>
-	<?php echo CHtml::encode($data->id); ?>
+	
+	<b><?php //echo CHtml::encode($data->getAttributeLabel('id')); ?>:</b>
+	<?php echo CHtml::link(CHtml::encode("view"), array('view', 'id'=>$data->id)); ?>
 	<br />
-
+	
+	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('address')); ?>:</b>
 	<?php echo CHtml::encode($data->address); ?>
 	<br />

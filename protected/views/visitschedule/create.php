@@ -3,16 +3,16 @@
 /* @var $model Visitschedule */
 
 $this->breadcrumbs=array(
-	'Visitschedules'=>array('index'),
+	'Visit Schedules'=>array('index'),
 	'Create',
 );
 
 $this->menu=array(
-	array('label'=>'List Visitschedule', 'url'=>array('index')),
-	array('label'=>'Manage Visitschedule', 'url'=>array('admin')),
+	array('label'=>'Visit Schedules', 'url'=>array('index'), 'visible'=>Yii::app()->user->checkAccess('ListSchedules')),
+	array('label'=>'Manage Schedules', 'url'=>array('admin'), 'visible'=>Yii::app()->user->checkAccess('SearchSchedule')),
 );
 ?>
 
-<h1>Create Visitschedule</h1>
+<h1>Schedule a Visit</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

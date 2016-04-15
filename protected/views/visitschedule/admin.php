@@ -3,13 +3,12 @@
 /* @var $model Visitschedule */
 
 $this->breadcrumbs=array(
-	'Visitschedules'=>array('index'),
+	'Visit Schedules'=>array('index'),
 	'Manage',
 );
 
 $this->menu=array(
-	array('label'=>'List Visitschedule', 'url'=>array('index')),
-	array('label'=>'Create Visitschedule', 'url'=>array('create')),
+	array('label'=>'List Schedules', 'url'=>array('index'), 'visible'=>Yii::app()->user->checkAccess('ListSchedules')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -26,15 +25,17 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Visitschedules</h1>
+<h1>Manage Visit Schedules</h1>
 
+<p>
+Click on <?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?> for more search options.
+</p>
+
+<div class="search-form" style="display:none">
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
 or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
 </p>
-
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
-<div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,
 )); ?>
@@ -45,7 +46,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'id',
+		//'id',
 		'fk_propdetail',
 		'fk_client',
 		'datetime',

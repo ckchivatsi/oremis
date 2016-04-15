@@ -63,11 +63,11 @@ class Visitschedule extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'fk_propdetail' => 'Fk Propdetail',
-			'fk_client' => 'Fk Client',
-			'datetime' => 'Datetime',
-			'paymentcode' => 'Paymentcode',
-			'status' => 'Status',
+			'fk_propdetail' => 'Property ID',
+			'fk_client' => 'Client ID',
+			'datetime' => 'Date-Time',
+			'paymentcode' => 'Payment Code',
+			'status' => 'Transaction Status',
 		);
 	}
 
@@ -110,5 +110,23 @@ class Visitschedule extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+	
+	/**
+		Function to get the property name displayed instead of the id
+	**/
+	public function getPropertyName()
+	{
+		$property=Propdetail::model()->findByAttributes(array('id'=>$this->fk_propdetail));
+		return $property->name;
+	}
+	
+	/**
+		Function to get the client name displayed instead of the id
+	**/
+	public function getClientName()
+	{
+		$client=User::model()->findByAttributes(array('id'=>$this->fk_client));
+		return $client->fullname;
 	}
 }
