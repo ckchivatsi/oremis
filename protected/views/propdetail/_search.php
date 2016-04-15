@@ -12,11 +12,6 @@
 )); ?>
 
 	<div class="row">
-		<?php echo $form->label($model,'id'); ?>
-		<?php echo $form->textField($model,'id'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'category'); ?>
 		<?php //echo $form->textField($model,'category',array('size'=>4,'maxlength'=>4)); ?>
 		<?php echo $form->dropDownList($model,'category',
@@ -44,6 +39,16 @@
 			array('order' => 'name ASC')), 'name' , 'name'),
 			array('prompt'=>'Select Location(county)')); ?>
 	</div>
+	
+<?php if(Yii::app()->user->role=="Admin"){?>
+	<div class="row">
+		<?php echo $form->label($model,'fk_owner'); ?>
+		<?php //echo $form->textField($model,'fk_owner'); ?>
+		<?php echo $form->dropDownList($model,'fk_owner',CHtml::listData(User::model()->findAllByAttributes(
+			array('usrtype' => "PropertyOwner")), 'id' , 'username'),
+			array('prompt'=>'Select Owner Username')); ?>
+	</div>
+<?php }?>
 
 	<div class="row">
 		<?php echo $form->label($model,'value'); ?>
@@ -57,7 +62,9 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'status'); ?>
-		<?php echo $form->textField($model,'status',array('size'=>9,'maxlength'=>9)); ?>
+		<?php //echo $form->textField($model,'status',array('size'=>9,'maxlength'=>9)); ?>
+		<?php echo $form->dropDownList($model,'status',
+			array(''=>'All','Available'=>'Available','Leased'=>'Leased','Sold'=>'Sold')); ?>
 	</div>
 
 

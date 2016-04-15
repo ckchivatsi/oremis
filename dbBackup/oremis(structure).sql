@@ -82,11 +82,12 @@ CREATE TABLE `ent_propdetail` (
   `status` enum('Available','Leased','Sold') NOT NULL DEFAULT 'Available',
   `photos` text NOT NULL,
   PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`),
   KEY `fk_propowner` (`fk_owner`),
   KEY `fk_proptype` (`fk_proptype`),
   CONSTRAINT `fk_propowner` FOREIGN KEY (`fk_owner`) REFERENCES `ent_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_proptype` FOREIGN KEY (`fk_proptype`) REFERENCES `ent_proptype` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 /*Table structure for table `ent_proprequirement` */
 
@@ -118,7 +119,7 @@ CREATE TABLE `ent_proptype` (
   `name` varchar(30) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 /*Table structure for table `ent_user` */
 
@@ -136,25 +137,25 @@ CREATE TABLE `ent_user` (
   `regdate` datetime NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `usrname` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 /*Table structure for table `ent_visitschedule` */
 
 DROP TABLE IF EXISTS `ent_visitschedule`;
 
 CREATE TABLE `ent_visitschedule` (
-  `id` int(10) unsigned zerofill NOT NULL AUTO_INCREMENT,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `fk_propdetail` int(10) NOT NULL,
   `fk_client` int(10) NOT NULL,
   `datetime` datetime NOT NULL,
   `paymentcode` varchar(20) NOT NULL,
-  `status` enum('Pending','Verified','Nullified') NOT NULL DEFAULT 'Pending',
+  `status` enum('Pending','Verified','Nullified','Closed') NOT NULL DEFAULT 'Pending',
   PRIMARY KEY (`id`),
   KEY `fk_visitedprop` (`fk_propdetail`),
   KEY `fk_visitor` (`fk_client`),
   CONSTRAINT `fk_visitedprop` FOREIGN KEY (`fk_propdetail`) REFERENCES `ent_propdetail` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_visitor` FOREIGN KEY (`fk_client`) REFERENCES `ent_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

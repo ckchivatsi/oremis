@@ -72,7 +72,7 @@ class VisitscheduleController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
+	public function actionCreate($fk_propdetail)
 	{
 		$model=new Visitschedule;
 
@@ -81,9 +81,12 @@ class VisitscheduleController extends Controller
 
 		if(isset($_POST['Visitschedule']))
 		{
+			$client=User::model()->findByAttributes(array('username'=>Yii::app()->user->name));
 			$model->attributes=$_POST['Visitschedule'];
+			$model->fk_client=$client->id;
+			$model->fk_propdetail=$fk_propdetail;
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('propdetail/admin'));
 		}
 
 		$this->render('create',array(

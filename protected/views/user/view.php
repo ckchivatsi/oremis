@@ -2,11 +2,6 @@
 /* @var $this UserController */
 /* @var $model User */
 
-$this->breadcrumbs=array(
-	'Users'=>array('index'),
-	$model->username,
-);
-
 $this->menu=array(
 	array('label'=>'List User', 'url'=>array('index'), 'visible'=>Yii::app()->user->checkAccess('ListUsers')),
 	array('label'=>'Create User', 'url'=>array('create'), 'visible'=>Yii::app()->user->checkAccess('CreateUser')),
@@ -22,7 +17,7 @@ $this->menu=array(
 if(Yii::app()->user->name==$model->username)
 	echo "My";
 else
-	echo $model->username;
+	echo $model->fullname;
 ?> 
 Profile</h1>
 
@@ -40,3 +35,57 @@ Profile</h1>
 		'regdate',
 	),
 )); ?>
+
+<br/><br/><br/><br/><br/>
+
+<?php
+if(Yii::app()->user->role=="Admin"){
+	if($model->usrtype=="PropertyOwner"){
+		echo "<h3><u>Property</u></h3>";
+		$query=Propdetail::model()->findAllByAttributes(array('fk_owner'=>$model->id));
+		$dataProvider = new CArrayDataProvider($rawData=$query);
+		$this->widget('zii.widgets.grid.CGridView',array(
+			'dataProvider'=>$dataProvider,          
+			'columns'=>array(
+				array('name'=>'name',
+					'header'=>'Property Name'),
+				array('name'=>'category',
+					'header'=>'Category'),				
+				array('name'=>'location',
+					'header'=>'Location'),
+				array('name'=>'description',
+					'header'=>'Description'),
+				array('name'=>'value',
+					'header'=>'Value'),
+				array('name'=>'dateposted',
+					'header'=>'Date Posted'),
+				array('name'=>'status',
+					'header'=>'Status'),
+			)
+		));
+	}
+	
+	if($model->usrtype=="Client"){
+		echo "<h3><u>Requirements</u></h3>";
+		$query=Proprequirement::model()->findAllByAttributes(array('fk_client'=>$model->id));
+		$dataProvider = new CArrayDataProvider($rawData=$query);
+		$this->widget('zii.widgets.grid.CGridView',array(
+			'dataProvider'=>$dataProvider,          
+			'columns'=>array(
+				array('name'=>'category',
+					'header'=>'Category'),				
+				array('name'=>'location',
+					'header'=>'Location'),
+				array('name'=>'description',
+					'header'=>'Description'),
+				array('name'=>'budget',
+					'header'=>'Budget'),
+				array('name'=>'dateposted',
+					'header'=>'Date Posted'),
+				array('name'=>'status',
+					'header'=>'Status'),					
+			)
+		));
+	}
+}
+ ?>

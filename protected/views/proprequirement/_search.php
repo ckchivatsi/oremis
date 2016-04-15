@@ -39,6 +39,16 @@
 			array('order' => 'name ASC')), 'name' , 'name'),
 			array('prompt'=>'Select Location(county)')); ?>
 	</div>
+	
+<?php if(Yii::app()->user->role=="Admin"){?>
+	<div class="row">
+		<?php echo $form->label($model,'fk_client'); ?>
+		<?php //echo $form->textField($model,'fk_client'); ?>
+		<?php echo $form->dropDownList($model,'fk_client',CHtml::listData(User::model()->findAllByAttributes(
+			array('usrtype'=>"Client")), 'id' , 'username'),
+			array('prompt'=>'Select Client Username')); ?>
+	</div>
+<?php }?>
 
 	<div class="row">
 		<?php echo $form->label($model,'budget'); ?>
@@ -54,7 +64,7 @@
 		<?php echo $form->label($model,'status'); ?>
 		<?php //echo $form->textField($model,'status',array('size'=>7,'maxlength'=>7)); ?>
 		<?php echo $form->dropDownList($model,'status',
-			array('Pending'=>'Pending','Found'=>'Found')); ?>
+			array(''=>'All','Pending'=>'Pending','Found'=>'Found')); ?>
 	</div>
 
 	<div class="row buttons">

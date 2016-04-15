@@ -2,12 +2,6 @@
 /* @var $this VisitscheduleController */
 /* @var $model Visitschedule */
 
-$this->breadcrumbs=array(
-	'Visit Schedules'=>array('index'),
-	$model->id=>array('view','id'=>$model->id),
-	'Update',
-);
-
 $this->menu=array(
 	array('label'=>'Visit Schedules', 'url'=>array('index'), 'visible'=>Yii::app()->user->checkAccess('ListSchedules')),
 	array('label'=>'View Schedule', 'url'=>array('view', 'id'=>$model->id), 'visible'=>Yii::app()->user->checkAccess('ViewSchedule')),

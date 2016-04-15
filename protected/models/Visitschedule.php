@@ -63,8 +63,8 @@ class Visitschedule extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'fk_propdetail' => 'Property ID',
-			'fk_client' => 'Client ID',
+			'fk_propdetail' => 'Property Name',
+			'fk_client' => 'Client',
 			'datetime' => 'Date-Time',
 			'paymentcode' => 'Payment Code',
 			'status' => 'Transaction Status',

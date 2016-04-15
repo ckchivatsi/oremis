@@ -18,7 +18,21 @@
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<?php echo $form->errorSummary($model); ?>
-
+	
+<?php /**	
+	<div class="row">
+		<?php echo $form->labelEx($model,'fk_propdetail'); ?>
+		<?php echo $form->textField($model,'fk_propdetail'); ?>
+		<?php echo $form->error($model,'fk_propdetail'); ?>
+	</div>
+	
+	<div class="row">
+		<?php echo $form->labelEx($model,'fk_client'); ?>
+		<?php echo $form->textField($model,'fk_client'); ?>
+		<?php echo $form->error($model,'fk_client'); ?>
+	</div>
+**/ ?>
+	
 	<div class="row">
 		<p>Please set a date and time you would like to visit the selected property.</p>
 		<?php echo $form->labelEx($model,'datetime'); ?>
@@ -40,27 +54,32 @@
 		<?php echo $form->error($model,'datetime'); ?>
 	</div>
 
-	<p>
-	Please pay a deposit of KSh.500 via the following payment options:
-		<ol>
-			<li>M-PESA paybill number <b>557109</b></li>
-			<li>AirtelMoney paybill <b>FAB254</b></li>
-		</ol>
-	<b>NB: Use your username as the reference.</b>	
-	<br/>
-	Enter your transaction ID below...
-	</p>
-	
-	<div class="row">		
+	<div class="row">
+		<p>
+		Please pay a deposit of KSh.500 via the following payment options:
+			<ol>
+				<li>M-PESA paybill number <b>557109</b></li>
+				<li>AirtelMoney paybill <b>FAB254</b></li>
+			</ol>
+		<b>NB: Use your username as the reference.</b>	
+		<br/>
+		Enter your transaction ID below...
+		</p>				
 		<?php echo $form->labelEx($model,'paymentcode'); ?>
 		<?php echo $form->textField($model,'paymentcode',array('size'=>20,'maxlength'=>20)); ?>
 		<?php echo $form->error($model,'paymentcode'); ?>
 	</div>
+	
+	<p class="note">
+	You'll be contacted immediately the payment transaction is verified.
+	</p>
 
 <?php if(Yii::app()->user->role=="Admin"){?>
 	<div class="row">
 		<?php echo $form->labelEx($model,'status'); ?>
-		<?php echo $form->textField($model,'status',array('size'=>9,'maxlength'=>9)); ?>
+		<?php //echo $form->textField($model,'status',array('size'=>9,'maxlength'=>9)); ?>
+		<?php echo $form->dropDownList($model,'status',
+			array('Closed'=>'Close','Nullified'=>'Nullify','Pending'=>'Pending','Verified'=>'Verify')); ?>
 		<?php echo $form->error($model,'status'); ?>
 	</div>
 <?php }?>

@@ -2,10 +2,6 @@
 /* @var $this UserController */
 /* @var $dataProvider CActiveDataProvider */
 
-$this->breadcrumbs=array(
-	'Users',
-);
-
 $this->menu=array(
 	array('label'=>'Create User', 'url'=>array('create'), 'visible'=>Yii::app()->user->checkAccess('CreateUser')),
 	array('label'=>'Search User', 'url'=>array('admin'), 'visible'=>Yii::app()->user->checkAccess('SearchUser')),

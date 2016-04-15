@@ -2,12 +2,6 @@
 /* @var $this ProprequirementController */
 /* @var $model Proprequirement */
 
-$this->breadcrumbs=array(
-	'Property Requirements'=>array('index'),
-	$model->id=>array('view','id'=>$model->id),
-	'Update Details',
-);
-
 $this->menu=array(
 	array('label'=>'List Requirements', 'url'=>array('index'), 'url'=>array('index'), 'visible'=>Yii::app()->user->checkAccess('ListRequirements')),
 	array('label'=>'Post Requirement', 'url'=>array('create'), 'visible'=>Yii::app()->user->checkAccess('CreateRequirement')),

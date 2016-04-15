@@ -8,6 +8,8 @@
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'propdetail-form',
+	'htmlOptions' => array(
+        'enctype' => 'multipart/form-data',),
 	// Please note: When you enable ajax validation, make sure the corresponding
 	// controller action is handling ajax validation correctly.
 	// There is a call to performAjaxValidation() commented in generated controller code.
@@ -63,10 +65,18 @@
 		<?php echo $form->textField($model,'value',array('size'=>20,'maxlength'=>20)); ?>
 		<?php echo $form->error($model,'value'); ?>
 	</div>
-	
+
+<?php /**	
 	<div class="row">
 		<?php echo $form->labelEx($model,'photos'); ?>
 		<?php echo $form->textArea($model,'photos',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->error($model,'photos'); ?>
+	</div>
+**/ ?>
+	
+	<div class="row">
+		<?php echo $form->labelEx($model,'photos'); ?>
+		<?php echo CHtml::activeFileField($model,'photos'); ?>
 		<?php echo $form->error($model,'photos'); ?>
 	</div>
 
@@ -74,7 +84,7 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'status'); ?>
 		<?php //echo $form->textField($model,'status',array('size'=>9,'maxlength'=>9)); ?>
-		<?php echo $form->dropDownList($model,'category',
+		<?php echo $form->dropDownList($model,'status',
 			array('Available'=>'Available','Leased'=>'Leased','Sold'=>'Sold')); ?>
 		<?php echo $form->error($model,'status'); ?>
 	</div>

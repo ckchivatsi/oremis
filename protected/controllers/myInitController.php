@@ -16,7 +16,11 @@ class myInitController extends Controller
 	public function actionCheckAccess()
 	{
 		if(Yii::app()->user->checkAccess('ViewSchedule')){
-			echo "AUTHORIZED";
+			echo Yii::app()->basePath;
+			echo "</br>";
+			echo Yii::app()->request->baseUrl;
+			echo "</br>";
+			echo Yii::getPathOfAlias('webroot');
 		}else{
 			echo "DENIED";
 		}

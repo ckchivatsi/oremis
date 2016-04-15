@@ -27,7 +27,7 @@
 		<?php echo $form->labelEx($model,'usrtype'); ?>
 		<?php //echo $form->textField($model,'usrtype',array('size'=>14,'maxlength'=>14)); ?>
 		<?php echo $form->dropDownList($model,'usrtype',
-									array('Admin'=>'Admin','Client'=>'Client','PropertyOwner'=>'Property Owner'),
+									array('Client'=>'Client','PropertyOwner'=>'Property Owner'),
 									array('prompt'=>'Select User Type')); ?>
 		<?php echo $form->error($model,'usrtype'); ?>
 	</div>

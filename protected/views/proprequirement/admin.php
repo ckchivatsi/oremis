@@ -2,11 +2,6 @@
 /* @var $this ProprequirementController */
 /* @var $model Proprequirement */
 
-$this->breadcrumbs=array(
-	'Property Requirements'=>array('index'),
-	'Search',
-);
-
 $this->menu=array(
 	array('label'=>'List Requirements', 'url'=>array('index'), 'visible'=>Yii::app()->user->checkAccess('ListRequirements')),
 	array('label'=>'Post Requirement', 'url'=>array('create'), 'visible'=>Yii::app()->user->checkAccess('CreateRequirement')),
@@ -46,18 +41,25 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'id'=>'proprequirement-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
+	'selectionChanged'=>"function(id){window.location='"
+		.Yii::app()->urlManager->createUrl('proprequirement/view',array('id'=>''))."' + 
+		$.fn.yiiGridView.getSelection(id);}",
 	'columns'=>array(
 		//'id',
 		'category',
 		//'fk_proptype',
+		array(
+			'name'=>'fk_proptype',
+			//'type'=>'raw',
+			'value'=>'$data->fkProptype->name',
+			'filter'=>CHtml::listData(Proptype::model()->findAll(array(
+				'order' =>'name ASC',)),'id','name')),
 		'location',
 		'description',
 		//'fk_client',		
 		'budget',
 		//'dateposted',
 		'status',		
-		array(
-			'class'=>'CButtonColumn',
-		),
+		//array('class'=>'CButtonColumn',),
 	),
 )); ?>

@@ -12,18 +12,19 @@
 )); ?>
 
 	<div class="row">
-		<?php echo $form->label($model,'id'); ?>
-		<?php echo $form->textField($model,'id',array('size'=>10,'maxlength'=>10)); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'fk_propdetail'); ?>
-		<?php echo $form->textField($model,'fk_propdetail'); ?>
+		<?php //echo $form->textField($model,'fk_propdetail'); ?>
+		<?php echo $form->dropDownList($model,'fk_propdetail',CHtml::listData(Propdetail::model()->findAll(
+			array('order' => 'name ASC')), 'id' , 'name'),
+			array('prompt'=>'Select Property')); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'fk_client'); ?>
-		<?php echo $form->textField($model,'fk_client'); ?>
+		<?php //echo $form->textField($model,'fk_client'); ?>
+		<?php echo $form->dropDownList($model,'fk_client',CHtml::listData(User::model()->findAllByAttributes(
+			array('usrtype'=>"Client")), 'id' , 'username'),
+			array('prompt'=>'Select Client Username')); ?>
 	</div>
 
 	<div class="row">
@@ -38,7 +39,9 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'status'); ?>
-		<?php echo $form->textField($model,'status',array('size'=>9,'maxlength'=>9)); ?>
+		<?php //echo $form->textField($model,'status',array('size'=>9,'maxlength'=>9)); ?>
+		<?php echo $form->dropDownList($model,'status',
+			array(''=>'All','Closed'=>'Close','Nullified'=>'Nullify','Pending'=>'Pending','Verified'=>'Verify')); ?>
 	</div>
 
 	<div class="row buttons">

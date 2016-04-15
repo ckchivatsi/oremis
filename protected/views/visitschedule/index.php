@@ -2,10 +2,6 @@
 /* @var $this VisitscheduleController */
 /* @var $dataProvider CActiveDataProvider */
 
-$this->breadcrumbs=array(
-	'Visit Schedules',
-);
-
 $this->menu=array(
 	array('label'=>'Manage Schedules', 'url'=>array('admin'), 'visible'=>Yii::app()->user->checkAccess('SearchSchedule')),
 );

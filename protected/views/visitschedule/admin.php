@@ -2,11 +2,6 @@
 /* @var $this VisitscheduleController */
 /* @var $model Visitschedule */
 
-$this->breadcrumbs=array(
-	'Visit Schedules'=>array('index'),
-	'Manage',
-);
-
 $this->menu=array(
 	array('label'=>'List Schedules', 'url'=>array('index'), 'visible'=>Yii::app()->user->checkAccess('ListSchedules')),
 );
@@ -45,15 +40,16 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'id'=>'visitschedule-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
+	'selectionChanged'=>"function(id){window.location='"
+		.Yii::app()->urlManager->createUrl('visitschedule/view',array('id'=>''))."' + 
+		$.fn.yiiGridView.getSelection(id);}",
 	'columns'=>array(
 		//'id',
-		'fk_propdetail',
-		'fk_client',
+		//'fk_propdetail',
+		//'fk_client',
 		'datetime',
 		'paymentcode',
 		'status',
-		array(
-			'class'=>'CButtonColumn',
-		),
+		//array('class'=>'CButtonColumn',),
 	),
 )); ?>

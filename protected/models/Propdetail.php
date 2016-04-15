@@ -49,6 +49,8 @@ class Propdetail extends CActiveRecord
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, category, fk_proptype, name, location, description, fk_owner, value, dateposted, status, photos', 'safe', 'on'=>'search'),
+			array('photos', 'file','types'=>'jpg, gif, png', 'allowEmpty'=>true, 'on'=>'update'),
+			array('photos', 'length', 'max'=>255, 'on'=>'insert,update'),
 		);
 	}
 
@@ -82,7 +84,7 @@ class Propdetail extends CActiveRecord
 			'value' => 'Value(KSh.)',
 			'dateposted' => 'Date Posted',
 			'status' => 'Status',
-			'photos' => 'Photos',
+			'photos' => 'Photo',
 		);
 	}
 

@@ -2,11 +2,6 @@
 /* @var $this PropdetailController */
 /* @var $model Propdetail */
 
-$this->breadcrumbs=array(
-	'Property'=>array('index'),
-	'Search',
-);
-
 $this->menu=array(
 	array('label'=>'List Property', 'url'=>array('index'), 'visible'=>Yii::app()->user->checkAccess('ListProperty')),
 	array('label'=>'Post Property', 'url'=>array('create'), 'visible'=>Yii::app()->user->checkAccess('CreateProperty')),
@@ -46,10 +41,19 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'id'=>'propdetail-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
+	'selectionChanged'=>"function(id){window.location='"
+		.Yii::app()->urlManager->createUrl('propdetail/view',array('id'=>''))."' + 
+		$.fn.yiiGridView.getSelection(id);}",
 	'columns'=>array(
 		//'id',
 		'category',
 		//'fk_proptype',
+		array(
+			'name'=>'fk_proptype',
+			//'type'=>'raw',
+			'value'=>'$data->fkProptype->name',
+			'filter'=>CHtml::listData(Proptype::model()->findAll(array(
+				'order' =>'name ASC',)),'id','name')),
 		'name',
 		'location',
 		'description',		
@@ -58,8 +62,6 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		//'dateposted',
 		'status',
 		//'photos',		
-		array(
-			'class'=>'CButtonColumn',
-		),
+		//array('class'=>'CButtonColumn',),
 	),
 )); ?>
