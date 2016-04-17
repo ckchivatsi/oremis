@@ -45,7 +45,10 @@ if(Yii::app()->user->role=="Admin"){
 		$query=Propdetail::model()->findAllByAttributes(array('fk_owner'=>$model->id));
 		$dataProvider = new CArrayDataProvider($rawData=$query);
 		$this->widget('zii.widgets.grid.CGridView',array(
-			'dataProvider'=>$dataProvider,          
+			'dataProvider'=>$dataProvider,
+			'selectionChanged'=>"function(id){window.location='"
+				.Yii::app()->urlManager->createUrl('propdetail/view',array('id'=>''))."' + 
+				$.fn.yiiGridView.getSelection(id);}",
 			'columns'=>array(
 				array('name'=>'name',
 					'header'=>'Property Name'),
@@ -70,7 +73,10 @@ if(Yii::app()->user->role=="Admin"){
 		$query=Proprequirement::model()->findAllByAttributes(array('fk_client'=>$model->id));
 		$dataProvider = new CArrayDataProvider($rawData=$query);
 		$this->widget('zii.widgets.grid.CGridView',array(
-			'dataProvider'=>$dataProvider,          
+			'dataProvider'=>$dataProvider,
+			'selectionChanged'=>"function(id){window.location='"
+				.Yii::app()->urlManager->createUrl('proprequirement/view',array('id'=>''))."' + 
+				$.fn.yiiGridView.getSelection(id);}",			
 			'columns'=>array(
 				array('name'=>'category',
 					'header'=>'Category'),				
@@ -82,6 +88,28 @@ if(Yii::app()->user->role=="Admin"){
 					'header'=>'Budget'),
 				array('name'=>'dateposted',
 					'header'=>'Date Posted'),
+				array('name'=>'status',
+					'header'=>'Status'),					
+			)
+		));
+?>		
+		<br/><br/><br/><br/><br/>
+<?php
+		echo "<h3><u>Visit Schedules</u></h3>";
+		$query=Visitschedule::model()->findAllByAttributes(array('fk_client'=>$model->id));
+		$dataProvider = new CArrayDataProvider($rawData=$query);
+		$this->widget('zii.widgets.grid.CGridView',array(
+			'dataProvider'=>$dataProvider,
+			'selectionChanged'=>"function(id){window.location='"
+				.Yii::app()->urlManager->createUrl('visitschedule/view',array('id'=>''))."' + 
+				$.fn.yiiGridView.getSelection(id);}",			
+			'columns'=>array(
+				array('header'=>'Property Name',
+					'value'=>'$data->fkPropdetail->name'),				
+				array('name'=>'datetime',
+					'header'=>'Date-Time'),
+				array('name'=>'paymentcode',
+					'header'=>'Payment Code'),
 				array('name'=>'status',
 					'header'=>'Status'),					
 			)

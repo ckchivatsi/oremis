@@ -107,7 +107,7 @@ CREATE TABLE `ent_propdetail` (
 
 /*Data for the table `ent_propdetail` */
 
-insert  into `ent_propdetail`(`id`,`category`,`fk_proptype`,`name`,`location`,`description`,`fk_owner`,`value`,`dateposted`,`status`,`photos`) values (1,'Sell',1,'Homechoice','Kilifi','very tall building found in a serene environment',3,'10M','2016-04-12 21:52:50','Available','9246-Homechoice'),(2,'Rent',1,'tttt','Garissa','geggegge',6,'25000','2016-04-14 14:56:09','Available','3500-tttt'),(5,'Rent',1,'Tsunami','Kisumu','Awesome place to be',6,'23M','2016-04-15 17:58:38','Available','3201-ppic.jpg'),(6,'Sell',1,'Kilimanjaro','Kirinyaga','Cool n quite',3,'11M','2016-04-15 18:12:25','Available','3201-ppic.jpg'),(7,'Sell',1,'jbnk','Kwale','kj nk',3,'67','2016-04-15 22:25:23','Available','7943-jbnk'),(8,'Sell',1,'ehzd','Baringo','sdc',3,'32','2016-04-15 22:27:32','Available','');
+insert  into `ent_propdetail`(`id`,`category`,`fk_proptype`,`name`,`location`,`description`,`fk_owner`,`value`,`dateposted`,`status`,`photos`) values (1,'Sell',1,'Homechoice','Kilifi','very tall building found in a serene environment',3,'10M','2016-04-12 21:52:50','Available',''),(2,'Rent',1,'tttt','Garissa','geggegge',6,'25000','2016-04-14 14:56:09','Available','3500-tttt'),(5,'Rent',1,'Tsunami','Kisumu','Awesome place to be',6,'23M','2016-04-15 17:58:38','Available','3201-ppic.jpg'),(6,'Sell',1,'Kilimanjaro','Kirinyaga','Cool n quite',3,'11M','2016-04-15 18:12:25','Available','3201-ppic.jpg'),(7,'Sell',1,'jbnk','Kwale','kj nk',3,'67','2016-04-15 22:25:23','Available','3027-jbnk.jpg'),(8,'Sell',1,'ehzd','Baringo','sdc',3,'32','2016-04-15 22:27:32','Available','');
 
 /*Table structure for table `ent_proprequirement` */
 
@@ -143,7 +143,7 @@ CREATE TABLE `ent_proptype` (
   `name` varchar(30) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 /*Data for the table `ent_proptype` */
 
@@ -191,7 +191,7 @@ CREATE TABLE `ent_visitschedule` (
 
 /*Data for the table `ent_visitschedule` */
 
-insert  into `ent_visitschedule`(`id`,`fk_propdetail`,`fk_client`,`datetime`,`paymentcode`,`status`) values (1,1,4,'2016-05-18 11:59:42','XCCVDSK','Pending'),(2,1,2,'2016-06-01 12:00:25','23563266342','Pending'),(3,2,4,'2016-05-12 12:00:51','DZCSDNIK','Pending'),(4,2,5,'2016-04-22 08:00:00','SDFJISJIFS','Pending'),(5,1,5,'2016-04-30 15:00:00','424WFWEK','Pending');
+insert  into `ent_visitschedule`(`id`,`fk_propdetail`,`fk_client`,`datetime`,`paymentcode`,`status`) values (1,1,4,'2016-05-18 11:59:42','XCCVDSK','Nullified'),(2,1,2,'2016-06-01 12:00:25','23563266342','Verified'),(3,2,4,'2016-04-17 17:00:00','DZCSDNIK','Verified'),(4,2,5,'2016-04-22 08:00:00','SDFJISJIFS','Closed'),(5,1,5,'2016-04-30 15:00:00','424WFWEK','Pending');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

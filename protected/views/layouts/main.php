@@ -35,8 +35,6 @@
 				//<-- user specific menu items -->
 				//show these menus when user is client
 				array('label'=>'Search Property', 'url'=>array('/propdetail/admin'), 'visible'=>Yii::app()->user->checkAccess('FindProperty') && Yii::app()->user->role!="Admin"),
-				//array('label'=>'Buy Property', 'url'=>array('#'), 'visible'=>Yii::app()->user->checkAccess('')),
-				//array('label'=>'Rent Property', 'url'=>array('#'), 'visible'=>Yii::app()->user->checkAccess('')),
 				array('label'=>'My Schedule', 'url'=>array('visitschedule/index'), 'visible'=>Yii::app()->user->checkAccess('MySchedule') && Yii::app()->user->role!="Admin"),
 				array('label'=>'Post Requirement', 'url'=>array('proprequirement/create'), 'visible'=>Yii::app()->user->checkAccess('CreateRequirement') && Yii::app()->user->role!="Admin"),
 				array('label'=>'My Requirements', 'url'=>array('proprequirement/index'), 'visible'=>Yii::app()->user->checkAccess('MyRequirements') && Yii::app()->user->role!="Admin"),	
@@ -75,9 +73,11 @@
 	<div class="clear"></div>
 
 	<div id="footer">
+		<marquee>OREMIS: Where Dreams Come Home...</marquee>
 		Copyright &copy; <?php echo date('Y'); ?> by OREMIS.<br/>
 		All Rights Reserved.<br/>
-		<?php echo Yii::powered(); ?>
+		<?php echo Yii::powered(); ?></br>
+		Designed and Developed by: <a href="https://ke.linkedin.com/in/ckchivatsi">C.K.CHIVATSI</a>
 	</div><!-- footer -->
 
 </div><!-- page -->

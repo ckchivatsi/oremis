@@ -51,6 +51,10 @@ class VisitscheduleController extends Controller
 				'actions'=>array('admin'),
 				'roles'=>array('SearchSchedule'),
 			),
+			array('allow',
+				'actions'=>array('calender'),
+				'roles'=>array('SearchSchedule'),
+			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
 			),
@@ -67,7 +71,23 @@ class VisitscheduleController extends Controller
 			'model'=>$this->loadModel($id),
 		));
 	}
+	
+	/**
+		Calender view of visitschedule
+	**/
+	public function actionCalender()
+	{
+		$model=new Visitschedule('search');
+		$model->unsetAttributes();  // clear any default values
+		$model->status="Verified";
+		if(isset($_GET['Visitschedule']))
+			$model->attributes=$_GET['Visitschedule'];
 
+		$this->render('calender',array(
+			'model'=>$model,
+		));
+	}
+		
 	/**
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.

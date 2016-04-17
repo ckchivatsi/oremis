@@ -37,20 +37,22 @@
 		<p>Please set a date and time you would like to visit the selected property.</p>
 		<?php echo $form->labelEx($model,'datetime'); ?>
 		<?php //echo $form->textField($model,'datetime'); ?>		
-		<?php Yii::import('application.extensions.CJuiDateTimePicker.CJuiDateTimePicker');
-			$this->widget('CJuiDateTimePicker',array(
-				'model'=>$model, 
-				'attribute'=>'datetime',
-                'mode'=>'datetime',
-				'language' => 'en',
-				'options'=>array(
-					'showOn' => 'both',
-					'dateFormat' => 'yy-mm-dd',
-					'timeFormat' => 'hh-mm-ss',
-					'hourMin' => '08',
-					'hourMax' => '16',
-				) 
-		)	); ?>
+		<?php $this->widget('ext.YiiDateTimePicker.jqueryDateTime', array(
+			'model' => $model,
+			'attribute' => 'datetime',
+			'options' => array(
+				'showOn' => 'both',
+				'theme' => 'dark',
+				'dateFormat' => 'yy-mm-dd',
+				'timeFormat' => 'hh-mm-ss',
+				'minDate' => '+1970/01/02',
+				'minTime' => '0',
+				'allowTimes' => ['08:00','08:30','09:00','09:30','10:00',
+								'10:30','11:00','11:30','12:00','12:30',
+								'13:00','13:30','14:00','14:30','15:00',
+								'15:30','16:00','16:30','17:00','17:30'],
+			), //DateTimePicker options
+		)); ?>
 		<?php echo $form->error($model,'datetime'); ?>
 	</div>
 

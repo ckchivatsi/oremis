@@ -4,6 +4,7 @@
 
 $this->menu=array(
 	array('label'=>'Manage Schedules', 'url'=>array('admin'), 'visible'=>Yii::app()->user->checkAccess('SearchSchedule')),
+	array('label'=>'Schedules Calender', 'url'=>array('calender','Visitschedule_sort'=>'datetime'), 'visible'=>Yii::app()->user->checkAccess('SearchSchedule')),
 );
 ?>
 

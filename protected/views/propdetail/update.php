@@ -19,5 +19,5 @@ $this->menu=array(
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
 
 <div class="row">
-		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/'.$model->photos,"image",array("width"=>200)); ?> 
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/property/'.$model->photos,"image",array("width"=>200)); ?> 
 </div>

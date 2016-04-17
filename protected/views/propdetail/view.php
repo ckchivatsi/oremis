@@ -34,5 +34,5 @@ $this->menu=array(
 	),
 )); ?>
 <div class="row">
-		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/'.$model->photos,"image",array("width"=>710,"height"=>500)); ?> 
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/property/'.$model->photos,"image",array("width"=>710,"height"=>500)); ?> 
 </div>	

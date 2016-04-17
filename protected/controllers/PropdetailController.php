@@ -88,10 +88,10 @@ class PropdetailController extends Controller
 			//upload photo with random name
 			$rnd = rand(0,9999);  // generate random number between 0-9999 
             $uploadedFile=CUploadedFile::getInstance($model,'photos');
-            $fileName = "{$rnd}-{$model->name}";  // random number + file name
+            $fileName = "{$rnd}-{$model->name}.jpg";  // random number + file name
             $model->photos = $fileName;
 			if($model->save()){
-				$uploadedFile->saveAs(Yii::app()->basePath.'/../images/'.$fileName);  // image will upload to oremis/images/
+				$uploadedFile->saveAs(Yii::app()->basePath.'/../images/property/'.$fileName);  // image will upload to oremis/images/property/
 				$this->redirect(array('view','id'=>$model->id));
 			}
 		}
@@ -119,11 +119,11 @@ class PropdetailController extends Controller
 			$model->attributes=$_POST['Propdetail'];
             $rnd = rand(0,9999);  // generate random number between 0-9999 
             $uploadedFile=CUploadedFile::getInstance($model,'photos');
-            $fileName = "{$rnd}-{$model->name}";// random number + file name
+            $fileName = "{$rnd}-{$model->name}.jpg";// random number + file name
             $model->photos = $fileName;
 			if($model->save()){
 				if($uploadedFile!=null){
-				$uploadedFile->saveAs(Yii::app()->basePath.'/../images/'.$fileName);
+				$uploadedFile->saveAs(Yii::app()->basePath.'/../images/property/'.$fileName);
 				$this->redirect(array('view','id'=>$model->id));
 				}
 				throw new CHttpException(": Make sure that you select a photo before clicking 'save'");

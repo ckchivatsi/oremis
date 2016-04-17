@@ -3,7 +3,8 @@
 /* @var $model Visitschedule */
 
 $this->menu=array(
-	array('label'=>'List Schedules', 'url'=>array('index'), 'visible'=>Yii::app()->user->checkAccess('ListSchedules')),
+	array('label'=>'Visit Schedules', 'url'=>array('index'), 'visible'=>Yii::app()->user->checkAccess('ListSchedules')),
+	array('label'=>'Schedules Calender', 'url'=>array('calender','Visitschedule_sort'=>'datetime'), 'visible'=>Yii::app()->user->checkAccess('SearchSchedule')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -46,10 +47,22 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'columns'=>array(
 		//'id',
 		//'fk_propdetail',
+		array(
+			'name'=>'fk_propdetail',
+			'value'=>'$data->fkPropdetail->name',
+			'filter'=>CHtml::listData(Propdetail::model()->findAll(array(
+				'order' =>'name ASC',)),'id','name')),
 		//'fk_client',
+		array(
+				'name'=>'fk_client',
+				'value'=>'$data->fkClient->username',
+				'filter'=>CHtml::listData(User::model()->findAllByAttributes(
+					array('usrtype' => "Client")), 'id' , 'username')),
 		'datetime',
 		'paymentcode',
 		'status',
-		//array('class'=>'CButtonColumn',),
+		array(
+			'header'=>'Actions',
+			'class'=>'CButtonColumn',),
 	),
 )); ?>

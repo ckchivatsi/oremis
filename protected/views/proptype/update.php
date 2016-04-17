@@ -8,6 +8,8 @@ $this->breadcrumbs=array(
 	'Update',
 );
 
+$this->pageTitle=Yii::app()->name.' - Update Proptype';
+
 $this->menu=array(
 	array('label'=>'List Property Types', 'url'=>array('index')),
 	array('label'=>'Add Property Type', 'url'=>array('create')),

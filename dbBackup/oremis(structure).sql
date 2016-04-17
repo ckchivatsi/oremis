@@ -119,7 +119,7 @@ CREATE TABLE `ent_proptype` (
   `name` varchar(30) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 /*Table structure for table `ent_user` */
 
