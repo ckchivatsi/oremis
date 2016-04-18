@@ -39,11 +39,8 @@ Profile</h1>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'usrtype'); ?>
-		<?php //echo $form->textField($model,'usrtype',array('size'=>14,'maxlength'=>14)); ?>
-		<?php echo $form->dropDownList($model,'usrtype',
-									array('Admin'=>'Admin','Client'=>'Client','PropertyOwner'=>'Property Owner'),
-									array('prompt'=>'Select User Type')); ?>
-		<?php echo $form->error($model,'usrtype'); ?>
+		<?php echo $form->textField($model,'usrtype',array('size'=>14,'maxlength'=>14, 'readonly'=>true)); ?>
+		<?php echo $form->error($model,'usrtype');  ?>
 	</div>
 
 	<div class="row">
@@ -54,7 +51,7 @@ Profile</h1>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'username'); ?>
-		<?php echo $form->textField($model,'username',array('size'=>20,'maxlength'=>20)); ?>
+		<?php echo $form->textField($model,'username',array('size'=>20,'maxlength'=>20, 'readonly'=>true)); ?>
 		<?php echo $form->error($model,'username'); ?>
 	</div>
 
