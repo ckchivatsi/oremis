@@ -12340,3 +12340,74 @@ Stack trace:
 #20 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
 #21 C:\xampp\htdocs\oremis\index.php(13): CWebApplication->run()
 REQUEST_URI=/oremis/index.php?r=user/update&id=1
+2016/04/24 11:32:38 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#8 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('visitschedule/u...')
+#9 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/oremis/index.php?r=visitschedule/update&id=3
+HTTP_REFERER=http://localhost/oremis/index.php?r=site/login
+---
+2016/04/24 16:14:21 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('register')
+#8 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/register')
+#9 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/oremis/index.php?r=user/register
+---
+2016/04/24 17:33:25 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\oremis\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#8 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('propdetail/inde...')
+#9 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/oremis/index.php?r=propdetail/index
+HTTP_REFERER=http://localhost/oremis/index.php?r=site/contact
+---
+2016/04/24 18:13:14 [error] [exception.CHttpException.: Make sure that you select a photo before clicking 'save'] exception 'CHttpException' in C:\xampp\htdocs\oremis\protected\controllers\PropdetailController.php:129
+Stack trace:
+#0 [internal function]: PropdetailController->actionUpdate('5')
+#1 C:\xampp\htdocs\oremis\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PropdetailController), Array)
+#2 C:\xampp\htdocs\oremis\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PropdetailController), Object(ReflectionMethod), Array)
+#3 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\oremis\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\xampp\htdocs\oremis\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\htdocs\oremis\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#12 C:\xampp\htdocs\oremis\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('propdetail/upda...')
+#13 C:\xampp\htdocs\oremis\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\oremis\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/oremis/index.php?r=propdetail/update&id=5
+HTTP_REFERER=http://localhost/oremis/index.php?r=propdetail/update&id=5
+---

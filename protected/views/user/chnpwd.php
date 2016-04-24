@@ -3,6 +3,11 @@
 /* @var $model User */
 /* @var $form CActiveForm */
 
+if(Yii::app()->user->role!="Admin")
+	$this->pageTitle=Yii::app()->name . ' - Change Password';
+else
+	$this->pageTitle=Yii::app()->name . ' - Reset Password';
+
 $this->menu=array(
 	array('label'=>'List Users', 'url'=>array('index'), 'visible'=>Yii::app()->user->checkAccess('ListUsers')),
 	array('label'=>'Create User', 'url'=>array('create'), 'visible'=>Yii::app()->user->checkAccess('CreateUser')),
@@ -12,14 +17,14 @@ $this->menu=array(
 );
 ?>
 
-<h1>Change 
+<h1> 
 <?php 
-if(Yii::app()->user->name==$model->username)
-	echo "My";
+if(Yii::app()->user->role!="Admin")
+	echo "Change My Password";
 else
-	echo $model->username;
+	echo "Reset ".$model->username." Password";
 ?> 
-Password</h1>
+</h1>
 
 
 <div class="form">

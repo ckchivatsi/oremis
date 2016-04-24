@@ -2,6 +2,8 @@
 /* @var $this UserController */
 /* @var $model User */
 
+$this->pageTitle=Yii::app()->name . ' - Manage Users';
+
 $this->menu=array(
 	array('label'=>'List Users', 'url'=>array('index'), 'visible'=>Yii::app()->user->checkAccess('ListUsers')),
 	array('label'=>'Create User', 'url'=>array('create'), 'visible'=>Yii::app()->user->checkAccess('CreateUser')),

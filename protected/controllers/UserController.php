@@ -61,7 +61,7 @@ class UserController extends Controller
 			),
 			array('allow',
 				'actions'=>array('register'),
-				'users'=>array('?'),
+				'users'=>array('*'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -157,9 +157,11 @@ class UserController extends Controller
 				$this->redirect(array('view','id'=>$model->id));
 			}
 		}
-		$this->render('register',array(
-			'model'=>$model
-		));
+		if(Yii::app()->user->isGuest){
+			$this->render('register',array('model'=>$model));
+		}else{
+			$this->redirect(Yii::app()->homeUrl);
+		}
 	} 
 
 	/**

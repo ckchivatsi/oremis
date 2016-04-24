@@ -2,6 +2,8 @@
 /* @var $this ProprequirementController */
 /* @var $model Proprequirement */
 
+$this->pageTitle=Yii::app()->name . ' - Search Property Requirements';
+
 $this->menu=array(
 	array('label'=>'List Requirements', 'url'=>array('index'), 'visible'=>Yii::app()->user->checkAccess('ListRequirements')),
 	array('label'=>'Post Requirement', 'url'=>array('create'), 'visible'=>Yii::app()->user->checkAccess('CreateRequirement')),

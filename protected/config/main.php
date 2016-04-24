@@ -95,7 +95,7 @@ return array(
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
-		'adminEmail'=>'info@oremis.net',
+		'adminEmail'=>'contact@oremis.net',
 		//'user'=>User::model()->findByAttributes(array('username'=>Yii::app()->user->name)),
 	),
 );

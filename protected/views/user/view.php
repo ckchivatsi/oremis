@@ -2,6 +2,11 @@
 /* @var $this UserController */
 /* @var $model User */
 
+if(Yii::app()->user->role!="Admin")
+	$this->pageTitle=Yii::app()->name . ' - My Profile';
+else
+	$this->pageTitle=Yii::app()->name . ' - ' . $model->username. ' Profile';
+
 $this->menu=array(
 	array('label'=>'List User', 'url'=>array('index'), 'visible'=>Yii::app()->user->checkAccess('ListUsers')),
 	array('label'=>'Create User', 'url'=>array('create'), 'visible'=>Yii::app()->user->checkAccess('CreateUser')),
@@ -14,12 +19,12 @@ $this->menu=array(
 
 <h1> 
 <?php 
-if(Yii::app()->user->name==$model->username)
-	echo "My";
+if(Yii::app()->user->role!="Admin")
+	echo "My Profile";
 else
-	echo $model->fullname;
+	echo $model->username." Profile";
 ?> 
-Profile</h1>
+</h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

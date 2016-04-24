@@ -2,6 +2,8 @@
 /* @var $this VisitscheduleController */
 /* @var $model Visitschedule */
 
+$this->pageTitle=Yii::app()->name . ' - Manage Visit Schedules';
+
 $this->menu=array(
 	array('label'=>'Visit Schedules', 'url'=>array('index'), 'visible'=>Yii::app()->user->checkAccess('ListSchedules')),
 	array('label'=>'Schedules Calender', 'url'=>array('calender','Visitschedule_sort'=>'datetime'), 'visible'=>Yii::app()->user->checkAccess('SearchSchedule')),

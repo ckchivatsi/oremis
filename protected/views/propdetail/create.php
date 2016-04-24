@@ -2,6 +2,8 @@
 /* @var $this PropdetailController */
 /* @var $model Propdetail */
 
+$this->pageTitle=Yii::app()->name . ' - Post Property';
+
 $this->menu=array(
 	array('label'=>'List Property', 'url'=>array('index'), 'visible'=>Yii::app()->user->checkAccess('ListProperty')),
 	array('label'=>'Manage Property', 'url'=>array('admin'), 'visible'=>Yii::app()->user->checkAccess('SearchProperty')),

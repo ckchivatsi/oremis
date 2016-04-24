@@ -4,12 +4,17 @@
 /* @var $form CActiveForm */
 
 $this->pageTitle=Yii::app()->name . ' - Contact Us';
+
 $this->breadcrumbs=array(
 	'Contact',
 );
 ?>
 
 <h1>Contact Us</h1>
+
+<table style="width: 900px;">
+<tr>
+<td>
 
 <?php if(Yii::app()->user->hasFlash('contact')): ?>
 
@@ -83,3 +88,29 @@ If you have business inquiries or other questions, please fill out the following
 </div><!-- form -->
 
 <?php endif; ?>
+
+</td>
+
+<td style="
+	background-color: #ff8080; 
+	vertical-align: top; 
+	text-align: justify;
+	width: 250px;">	
+	<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/home/'.'contact.gif',"ContactUs",array("width"=>250,"height"=>250)); ?> </br></br>
+	<h5><b>Contact No.:</b></br>
+		+254 716 557109</br>
+		+254 738 557109</h5>
+	<h5><b>E-Mail Address:</b></br>
+		support@oremis.net</br>
+		info@oremis.net</h5>
+	<h5><b>Location:</b></br>
+		Along Biashara Street</br>
+		Opposite Apache India Cäfe</br>
+		Kilifi, Kenya.</h5>
+	<h5><b>P.O. Box 676-80108,</br>
+		KILIFI, KENYA.</b></h5>
+</td>
+
+</tr>
+</table>
+

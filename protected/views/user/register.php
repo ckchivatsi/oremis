@@ -3,6 +3,8 @@
 /* @var $model User */
 /* @var $form CActiveForm */
 
+$this->pageTitle=Yii::app()->name . ' - Register';
+
 
 ?>
 

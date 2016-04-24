@@ -2,6 +2,8 @@
 /* @var $this PropdetailController */
 /* @var $model Propdetail */
 
+$this->pageTitle=Yii::app()->name . ' - Update Property Details';
+
 $this->menu=array(
 	array('label'=>'List Property', 'url'=>array('index'), 'visible'=>Yii::app()->user->checkAccess('ListProperty')),
 	array('label'=>'Post Property', 'url'=>array('create'), 'visible'=>Yii::app()->user->checkAccess('CreateProperty')),

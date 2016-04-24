@@ -151,4 +151,22 @@ class Propdetail extends CActiveRecord
 		$powner=User::model()->findByAttributes(array('id'=>$this->fk_owner));
 		return $powner->fullname;
 	}
+	
+	/**
+		Function to get the Property Owner phone number displayed instead of the id
+	**/
+	public function getPropertyOwnerPhone()
+	{
+		$powner=User::model()->findByAttributes(array('id'=>$this->fk_owner));
+		return $powner->phone;
+	}
+	
+	/**
+		Function to get the Property Owner email displayed instead of the id
+	**/
+	public function getPropertyOwnerEmail()
+	{
+		$powner=User::model()->findByAttributes(array('id'=>$this->fk_owner));
+		return $powner->email;
+	}
 }

@@ -2,6 +2,8 @@
 /* @var $this ProptypeController */
 /* @var $dataProvider CActiveDataProvider */
 
+$this->pageTitle=Yii::app()->name . ' - Property Types';
+
 $this->breadcrumbs=array(
 	'Property Types',
 );

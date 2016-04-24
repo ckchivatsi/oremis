@@ -3,6 +3,11 @@
 /* @var $model User */
 /* @var $form CActiveForm */
 
+if(Yii::app()->user->name==$model->username)
+	$this->pageTitle=Yii::app()->name . ' - Profile';
+else
+	$this->pageTitle=Yii::app()->name . ' - ' .$model->username. ' Profile';
+
 $this->menu=array(
 	array('label'=>'List Users', 'url'=>array('index'), 'visible'=>Yii::app()->user->checkAccess('ListUsers')),
 	array('label'=>'Create User', 'url'=>array('create'), 'visible'=>Yii::app()->user->checkAccess('CreateUser')),

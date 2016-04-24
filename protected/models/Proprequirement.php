@@ -139,4 +139,22 @@ class Proprequirement extends CActiveRecord
 		$client=User::model()->findByAttributes(array('id'=>$this->fk_client));
 		return $client->fullname;
 	}
+	
+	/**
+		Function to get the client phone number displayed instead of the id
+	**/
+	public function getClientPhone()
+	{
+		$client=User::model()->findByAttributes(array('id'=>$this->fk_client));
+		return $client->phone;
+	}
+	
+	/**
+		Function to get the client email displayed instead of the id
+	**/
+	public function getClientEmail()
+	{
+		$client=User::model()->findByAttributes(array('id'=>$this->fk_client));
+		return $client->email;
+	}
 }

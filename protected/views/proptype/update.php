@@ -2,6 +2,8 @@
 /* @var $this ProptypeController */
 /* @var $model Proptype */
 
+$this->pageTitle=Yii::app()->name . ' - Update Proptype';
+
 $this->breadcrumbs=array(
 	'Property Types'=>array('index'),
 	$model->name=>array('view','id'=>$model->id),

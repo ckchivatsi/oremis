@@ -2,6 +2,8 @@
 /* @var $this ProprequirementController */
 /* @var $model Proprequirement */
 
+$this->pageTitle=Yii::app()->name . ' - Requirement Details';
+
 $this->menu=array(
 	array('label'=>'List Requirements', 'url'=>array('index'), 'visible'=>Yii::app()->user->checkAccess('ListRequirements')),
 	array('label'=>'Post Requirement', 'url'=>array('create'), 'visible'=>Yii::app()->user->checkAccess('CreateRequirement')),
@@ -23,10 +25,12 @@ $this->menu=array(
 		'propertyType',
 		'location',
 		'description',
-		//'fk_client',
-		'clientName',
 		'budget',
 		'dateposted',
 		'status',
+		//'fk_client',
+		'clientName',
+		'clientPhone',
+		'clientEmail',
 	),
 )); ?>

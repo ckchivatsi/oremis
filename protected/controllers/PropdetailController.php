@@ -85,10 +85,9 @@ class PropdetailController extends Controller
 			$model->attributes=$_POST['Propdetail'];
 			$model->fk_owner=$powner->id;
 			$model->dateposted=date_create()->format('Y-m-d H-i-s');
-			//upload photo with random name
-			$rnd = rand(0,9999);  // generate random number between 0-9999 
+			//upload photo  
             $uploadedFile=CUploadedFile::getInstance($model,'photos');
-            $fileName = "{$rnd}-{$model->name}.jpg";  // random number + file name
+            $fileName = "{$model->name}.jpg";  // file name
             $model->photos = $fileName;
 			if($model->save()){
 				$uploadedFile->saveAs(Yii::app()->basePath.'/../images/property/'.$fileName);  // image will upload to oremis/images/property/
@@ -117,9 +116,8 @@ class PropdetailController extends Controller
 		{
 			
 			$model->attributes=$_POST['Propdetail'];
-            $rnd = rand(0,9999);  // generate random number between 0-9999 
             $uploadedFile=CUploadedFile::getInstance($model,'photos');
-            $fileName = "{$rnd}-{$model->name}.jpg";// random number + file name
+            $fileName = "{$model->name}.jpg";// file name
             $model->photos = $fileName;
 			if($model->save()){
 				if($uploadedFile!=null){

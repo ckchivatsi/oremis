@@ -2,6 +2,8 @@
 /* @var $this ProptypeController */
 /* @var $model Proptype */
 
+$this->pageTitle=Yii::app()->name . ' - Add Property Type';
+
 $this->breadcrumbs=array(
 	'Property Types'=>array('index'),
 	'Add',
